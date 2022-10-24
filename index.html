@@ -17,16 +17,29 @@
     <!-- Header -->
     <header>
         <button id="mode" >
-            <i class="fa-regular fa-lightbulb">Modo Oscuro</i>
+            <i class="fa-regular fa-lightbulb">
+            <span>Modo Oscuro</span></i>
         </button>
+            <!-- <i class="fa-solid fa-lightbulb"></i>para hacer click en Modo Claro -->
+        
         <h1>Generador de Memes</h1>
         <div class="buttons-editor">
             <button id="btn-image">
-                <i class="fa-regular fa-lightbulb">Editar Imagen</i>
+                <i class="fa-regular fa-image">
+                <span>Editar Imagen</span></i>
             </button>
+
+            <!-- <i class="fa-solid fa-image"></i> -->
+            
+
             <button id="btn-text">
-                <i class="fa-regular fa-lightbulb">Editar Texto</i>
+                <i class="fa-solid fa-pen-nib"></i>
+                    <span>Editar Texto</span></i>
             </button>
+
+            <!-- <i class="fa-regular fa-pen-nib"></i>
+ -->
+
         </div>
     </header>
     <!-- End Header -->
@@ -37,11 +50,11 @@
         <!-- Section Meme Container -->
         <section>
             <div class="meme-container">
-                <p class="text-1">Texto Superior</p>
+                <p class="text-1">TEXTO SUPERIOR</p>
                 <div class="image-container"></div>
-                <p class="text-2">Texto Inferior</p>
+                <p class="text-2">TEXTO INFERIOR</p>
             </div>
-           <button id="download">Descargar</button>       
+           <button id="download">Descargar Meme</button>       
         </section>
 
         <!-- End Section Meme Container -->
@@ -121,24 +134,24 @@ End Image Editor -->
     <h2>TEXTO</h2>
     <div class="input-top-txt">
         <h3 class="subtitles">SUPERIOR</h3>
-        <textarea name="top-txt" id="top-txt"></textarea>
+        <textarea name="top-txt" id="top-txt" placeholder="Texto Superior"></textarea>
         <div>
-            <input type="checkbox" id="checkbox">
-            <label for="checkbox" class="checkbox"></label>
+            <input type="checkbox" id="checkbox-top">
+            <label for="checkbox-top" class="checkbox"></label>
         </div>
     </div>
     <div class="input-bottom-txt">
             <h3 class="subtitles">INFERIOR</h3>
-            <textarea name="bottom-txt" id="bottom-txt"></textarea>
+            <textarea name="bottom-txt" id="bottom-txt" placeholder="Texto Inferior"></textarea>
             <div>
-                <input type="checkbox" id="checkbox">
-                <label for="checkbox" class="checkbox"></label>
+                <input type="checkbox" id="checkbox-bottom">
+                <label for="checkbox-bottom" class="checkbox"></label>
             </div>
     </div>
 
     <div class="font">
         <h3 class="subtitles">FUENTE</h3>
-        <select id="font-type" name="font-type">
+        <select  id="font-type" name="font-type">
             <option value="1">Arial</option>
             <option value="2">Arial</option>
             <option value="3">Arial</option>
@@ -151,26 +164,28 @@ End Image Editor -->
         <div class="font-selector">
             <input class="font-size" type="number">
             <div class="text-align">
-                <button></button>
-                <button></button>
-                <button></button>
+                <button class="align"></button>
+                <button class="align"></button>
+                <button class="align"></button>
             </div>
         </div>
     </div>
 
-    <div class="font-color-back">
-        <div>
-            <h3 class="subtitles">COLOR</h3>
-            <div>
-                <input type="color">
-                <span></span>
+    <div class="panel-color-back">
+        <div class="color-font-back">
+            <div class="color-font">
+                <h3 class="subtitles">COLOR</h3>
+                <div >
+                    <input type="color"class="input-color-font">
+                    <span></span>
+                </div>
             </div>
-        </div>
-        <div>
-            <h3 class="subtitles">FONDO</h3>
-            <div>
-                <input type="color">
-                <span></span>
+            <div class="color-back">
+                <h3 class="subtitles">FONDO</h3>
+                <div>
+                    <input type="color" class="input-color-back">
+                    <span></span>
+                </div>
             </div>
         </div>
         <div>
