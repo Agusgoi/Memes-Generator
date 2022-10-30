@@ -8,7 +8,18 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+        integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
    
     <title>Document</title>
 </head>
@@ -53,11 +64,11 @@
     <main>
 
         <!-- Section Meme Container -->
-        <section>
-            <div class="meme-container">
-                <p class="text-1">TEXTO SUPERIOR</p>
+        <section class="section-meme">
+            <div id="meme-container">
+                <p id="textOne" class="text-1">TEXTO SUPERIOR</p>
                 <div class="image-container"></div>
-                <p class="text-2">TEXTO INFERIOR</p>
+                <p id="textTwo" class="text-2">TEXTO INFERIOR</p>
             </div>
            <button id="download">Descargar Meme</button>       
         </section>
@@ -68,7 +79,7 @@
 
         <aside id="editor">
 
-            <!-- Image Editor
+            <!-- Image Editor -->
         <section id="img-editor">
         <h2>IMAGEN</h2>
         <div class="input-url">
@@ -132,7 +143,7 @@
         </div>
         <button id="refresh">Reestablecer filtros</button>
     </section>
-End Image Editor -->
+<!-- End Image Editor -->
 
  <!-- Text Editor-->
  <section id="txt-editor">
@@ -142,7 +153,7 @@ End Image Editor -->
         <textarea name="top-txt" id="top-txt" placeholder="Texto Superior"></textarea>
         <div>
             <input type="checkbox" id="checkbox-top">
-            <label for="checkbox-top" class="checkbox"></label>
+            <label for="checkbox-top" class="checkbox">Sin Texto Superior</label>
         </div>
     </div>
     <div class="input-bottom-txt">
@@ -150,24 +161,23 @@ End Image Editor -->
             <textarea name="bottom-txt" id="bottom-txt" placeholder="Texto Inferior"></textarea>
             <div>
                 <input type="checkbox" id="checkbox-bottom">
-                <label for="checkbox-bottom" class="checkbox"></label>
+                <label for="checkbox-bottom" class="checkbox">Sin Texto Inferior</label>
             </div>
     </div>
 
     <div class="font">
         <h3 class="subtitles">FUENTE</h3>
         <select  id="font-type" name="font-type">
-            <option value="1">Arial</option>
-            <option value="2">Arial</option>
-            <option value="3">Arial</option>
-            <option value="4">Arial</option>
-            <option value="5">Arial</option>
-            <option value="6">Arial</option>
-            <option value="7">Arial</option>
-            <option value="8">Arial</option>
+            <option id="arial" value="1">Arial</option>
+            <option id="courier" value="2">Courier New</option>
+            <option value="3">Lucida Sans</option>
+            <option value="4">Cambria</option>
+            <option value="5">Verdana</option>
+            <option value="6">Times New Roman</option>
+            <option value="7">Source Sans Pro</option>
         </select>
         <div class="font-selector">
-            <input class="font-size" type="number">
+            <input class="font-size" type="number" value="40" min="20" max="60">
             <div class="text-align">
                 <button class="btn-align"></button>
                 <button class="btn-align"></button>
@@ -180,22 +190,22 @@ End Image Editor -->
         <div class="color-font-back">
             <div class="color-font">
                 <h3 class="subtitles">COLOR</h3>
-                <div >
-                    <input type="color"class="input-color-font">
-                    <span></span>
+                <div class="cont-color">
+                    <input type="color" class="input-color-font">
+                    <span class="name-color">CHAU</span>
                 </div>
             </div>
             <div class="color-back">
                 <h3 class="subtitles">FONDO</h3>
-                <div>
-                    <input type="color" class="input-color-back">
-                    <span></span>
+                <div class="cont-color">
+                    <input type="color" value="#000000" class="input-color-back">
+                    <span class="name-color">HOLA</span>
                 </div>
             </div>
         </div>
         <div>
             <input type="checkbox" id="checkbox">
-            <label for="checkbox" class="checkbox"></label>
+            <label for="checkbox" class="checkbox">Fondo transparente</label>
         </div>
     </div>
     <div class="font-outline">
@@ -232,5 +242,6 @@ End Image Editor -->
     </main>
     
     <!-- End Main -->
+    <script src="main.js"></script>
 </body>
 </html>
