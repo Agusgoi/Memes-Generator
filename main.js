@@ -66,10 +66,15 @@ let checkboxTop = $ ('#checkbox-top');
 let checkboxBottom = $ ('#checkbox-bottom');
 let textSup = $ ("#textOne");
 let textInf = $ ("#textTwo");
-
-let arial = $ ('#arial');
-let option = $ ('select.option');
+let fontSize = $ ('.font-size');
 let fontSelect = $ ('#font-type');
+let leftAlign = $ ('#left-align');
+let centerAlign = $ ('#center-align');
+let rightAlign = $ ('#right-align');
+let noneOut = $ ('#none-out');
+let whiteOut = $ ('#white-out');
+let blackOut = $ ('#black-out');
+
 
 let contImage = $ ("#meme-container");
 
@@ -99,8 +104,66 @@ checkboxBottom.addEventListener ("click", (event)=>{
 })
 
 
+fontSize.addEventListener ("input", (event)=>{
+    bottomTextMeme.style.fontSize = `${event.target.value}px`;
+    topTextMeme.style.fontSize = `${event.target.value}px`;
+})
 
 
+fontSelect.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.fontFamily = `${event.target.value}`;
+    topTextMeme.style.fontFamily = `${event.target.value}`;
+  
+})
+  
+leftAlign.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.justifyContent = 'left';
+    topTextMeme.style.justifyContent = 'left';
+})
+
+centerAlign.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.justifyContent = 'center';
+    topTextMeme.style.justifyContent = 'center';
+})
+
+rightAlign.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.justifyContent = 'right';
+    topTextMeme.style.justifyContent = 'right';
+})
+
+noneOut.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.webkitTextStrokeWidth = '0px';
+    topTextMeme.style.webkitTextStrokeWidth = '0px';
+})
+
+
+whiteOut.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.webkitTextStrokeWidth = '1px';
+    topTextMeme.style.webkitTextStrokeWidth = '1px';
+    bottomTextMeme.style.webkitTextStrokeColor = 'white';
+    topTextMeme.style.webkitTextStrokeColor = 'white';
+})
+
+blackOut.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.webkitTextStrokeWidth = '1px';
+    topTextMeme.style.webkitTextStrokeWidth = '1px';
+    bottomTextMeme.style.webkitTextStrokeColor = 'black';
+    topTextMeme.style.webkitTextStrokeColor = 'black';
+})
+
+/* -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: 0px;
+ */
+
+/* 
+option.addEventListener ("click", (event)=>{
+    /* topTextMeme.innerText = event.target.value; */
+ 
+
+  /*   if (event.target.id === 'arial'){
+        console.log ('soy 2');
+    } */
+ 
 
 
 
@@ -120,26 +183,6 @@ checkboxBottom.addEventListener ("click", (event)=>{
     }
 })
  */
-
-//NO ME FUNCIONA EL SELECTOR DE FUENTE
-
-fontSelect.addEventListener ("click", (event)=>{
-    /* topTextMeme.innerText = event.target.value; */
-   console.log (event);
-
-    if (event.target.id === 'arial'){
-        console.log ('soy 2');
-    }
-})
-
-option.addEventListener ("click", (event)=>{
-    /* topTextMeme.innerText = event.target.value; */
-   console.log (event);
-
-  /*   if (event.target.id === 'arial'){
-        console.log ('soy 2');
-    } */
-})
 
 
 

@@ -168,20 +168,20 @@
     <div class="font">
         <h3 class="subtitles">FUENTE</h3>
         <select  id="font-type" name="font-type">
-            <option id="arial" value="1">Arial</option>
-            <option id="courier" value="2">Courier New</option>
-            <option value="3">Lucida Sans</option>
-            <option value="4">Cambria</option>
-            <option value="5">Verdana</option>
-            <option value="6">Times New Roman</option>
-            <option value="7">Source Sans Pro</option>
+            <option value="arial">Arial</option>
+            <option value="courier">Courier New</option>
+            <option value="lucida">Lucida Sans</option>
+            <option value="cambria">Cambria</option>
+            <option value="verdana">Verdana</option>
+            <option value="monospace">Monospace</option>
+            <option value="source sans pro">Source Sans Pro</option>
         </select>
         <div class="font-selector">
             <input class="font-size" type="number" value="40" min="20" max="60">
             <div class="text-align">
-                <button class="btn-align"></button>
-                <button class="btn-align"></button>
-                <button class="btn-align"></button>
+                <button id="left-align" class="btn-align"><i class="fa-solid fa-align-left"></i></button>
+                <button id="center-align" class="btn-align"><i class="fa-solid fa-align-center"></i></button>
+                <button id="right-align" class="btn-align"><i class="fa-solid fa-align-right"></i></button>
             </div>
         </div>
     </div>
@@ -211,9 +211,9 @@
     <div class="font-outline">
         <h3 class="subtitles">CONTORNO</h3>
         <div class="outline-type">
-            <button class="btn-outline">Ninguno</button>
-            <button class="btn-outline">Claro</button>
-            <button class="btn-outline">Oscuro</button>
+            <button id="none-out" class="btn-outline">Ninguno</button>
+            <button id="white-out" class="btn-outline">Blanco</button>
+            <button id="black-out" class="btn-outline">Negro</button>
         </div>
     </div>
     <div class="space">
