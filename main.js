@@ -74,7 +74,10 @@ let rightAlign = $ ('#right-align');
 let noneOut = $ ('#none-out');
 let whiteOut = $ ('#white-out');
 let blackOut = $ ('#black-out');
-
+let fontColor = $ ('.input-color-font');
+let fontColorBack = $ ('.input-color-back');
+let nameColor = $ ('.name-color');
+let nameColorBack = $ ('.name-color-back');
 
 let contImage = $ ("#meme-container");
 
@@ -151,9 +154,24 @@ blackOut.addEventListener ("click", (event)=>{
     topTextMeme.style.webkitTextStrokeColor = 'black';
 })
 
-/* -webkit-text-stroke-color: red;
-    -webkit-text-stroke-width: 0px;
- */
+fontColor.addEventListener ("change", (event)=>{
+    nameColor.innerText = event.target.value;
+    bottomTextMeme.style.color = `${event.target.value}`;
+    topTextMeme.style.color = `${event.target.value}`;
+
+})
+
+fontColorBack.addEventListener ("change", (event)=>{
+    nameColorBack.innerText = event.target.value;
+    bottomTextMeme.style.backgroundColor = `${event.target.value}`;
+    topTextMeme.style.backgroundColor = `${event.target.value}`;
+
+})
+
+
+
+
+
 
 /* 
 option.addEventListener ("click", (event)=>{

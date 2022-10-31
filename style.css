@@ -157,11 +157,6 @@ main {
   
 }
 
-.checkbox {
-    font-size: 15px;
-}
-
-/*  APLICA PARA AMBOS ASIDE EN LIGHTMODE */
 
 h2 {
     color: #000000;
@@ -198,18 +193,18 @@ h3 {
    
 }
 
+.checkbox {
+    font-size: 15px;
+    padding-top: 1px;
+    text-align: left;
+}
+
+
 .font-selector  {
     display: flex;
    
 }
 
-#arial {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#courier {
-    font-family: 'Courier New', Courier, monospace;
-}
 
 .font-size {
     width: 50%;
@@ -234,33 +229,42 @@ h3 {
 
 .color-font-back  {
     display: flex;
- 
-   
+    gap: 5px;
+
 }
 
 .cont-color {
     display: flex;
-    position: relative;
+    background-color: var(--lightmode-darkblue);
+    height: 30px;
+    border-radius: 3px;
+    border: none;
+    appearance: none;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    outline: none;
+
+
 }
 
 .input-color-font, .input-color-back {
-background-color: var(--lightmode-darkblue);
-border-radius: 3px;
+background-color: transparent;
 border: none;
-outline: none;
-gap: 5px;
--webkit-appearance: none;
-padding: 0;
-
+width: 20px;
+height: 20px;
+appearance: none;
+cursor: pointer;
 }
 
-.name-color{
-    position: absolute;
-    left: 35px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 14px;
+/* .input-color-font:: webkit-color-swatch {
+    border-radius: 15px;
+    border: none;
+
 }
+ */
+
+
 
 
 
