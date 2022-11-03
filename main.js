@@ -2,15 +2,19 @@
 
 const $ = (selector) => document.querySelector (selector);
 
-//CAMBIO DE MODE - Variables
+// BOTONES HEADER
+
+// ----- Variables -----
 
 let btnMode = $ ('.cont-btn-mode #mode');
 let header = $ ('header');
 let btnHeader = $ ('#mode', '#btn-image', '#btn-text'); // no me funciona de  avarios
 let section = $ ('section');
-let aside = $ ('#txt-editor');
+let asideText = $ ('#txt-editor');
+let asideImage = $ ('#img-editor');
 let textarea = $ ('#top-txt', '#bottom-txt'); 
-
+let btnText = $ ('#btn-text');
+let btnImage = $ ('#btn-image');
 
 //CAMBIO DE MODE - Eventos
 
@@ -30,13 +34,13 @@ btnMode.addEventListener ("click", (event)=> {
 
 //NO SE ME APLICA EL CAMBIO DE COLOR DEL BACKGROUND
 btnMode.addEventListener ("click", (event)=> {
-    btnHeader.classList.toggle ("darkmode-btn");
+    btnMode.classList.toggle ("darkmode-btn");
 })
 
 
 //NO SE ME APLICA EL CAMBIO DE COLOR DEL BACKGROUND
 btnMode.addEventListener ("click", (event)=> {
-    aside.classList.toggle ("darkmode-aside");
+    asideText.classList.toggle ("darkmode-aside");
     
 })
 
@@ -47,15 +51,31 @@ btnMode.addEventListener ("click", (event)=> {
 
 
 
+//  BOTONES PARA EDITORES
+
+
+//  no se me aplica el display none
+btnText.addEventListener ("click", (event)=>{
+   asideText.classList.remove ("display-none");
+   asideImage.classList.add ("display-none");
+    console.log (event);
+    
+})
+
+btnImage.addEventListener ("click", (event)=>{
+    asideText.classList.add ("display-none");
+    asideImage.classList.remove ("display-none");
+     console.log (event);
+     
+ })
 
 
 
 
 
+// TEXT EDITOR ASIDE
 
-
-
-// TEXT EDITOR ASIDE - Variables
+// ------ Variables -------
 
 let body = document.body;
 let bottomTextMeme = $ ('.text-2');
@@ -64,6 +84,7 @@ let topTextMeme = $ ('.text-1');
 let topTextImput = $ ('#top-txt');
 let checkboxTop = $ ('#checkbox-top');
 let checkboxBottom = $ ('#checkbox-bottom');
+let checkboxBack = $ ('#checkbox-back');
 let textSup = $ ("#textOne");
 let textInf = $ ("#textTwo");
 let fontSize = $ ('.font-size');
@@ -78,11 +99,14 @@ let fontColor = $ ('.input-color-font');
 let fontColorBack = $ ('.input-color-back');
 let nameColor = $ ('.name-color');
 let nameColorBack = $ ('.name-color-back');
+let spacing = $ ('.input-space');
+let lineSpacing = $ ('#line-spacing');
+
 
 let contImage = $ ("#meme-container");
 
 
-// TEXT EDITOR ASIDE - Eventos
+// TEXT EDITOR ASIDE ----- Eventos ------
 
 
 bottomTextImput.addEventListener ("input", (event)=>{
@@ -105,6 +129,21 @@ checkboxBottom.addEventListener ("click", (event)=>{
     textInf.classList.toggle ("display-none");
     console.log (event);
 })
+
+
+
+checkboxBack.addEventListener ("change", (event)=>{
+  
+ if (event.target.checked) {
+    textInf.style.backgroundColor = 'transparent';
+    textSup.style.backgroundColor = 'transparent';
+ }else{
+    textInf.style.backgroundColor = fontColorBack.value;
+    textSup.style.backgroundColor = fontColorBack.value;
+ }
+
+})
+
 
 
 fontSize.addEventListener ("input", (event)=>{
@@ -165,24 +204,39 @@ fontColorBack.addEventListener ("change", (event)=>{
     nameColorBack.innerText = event.target.value;
     bottomTextMeme.style.backgroundColor = `${event.target.value}`;
     topTextMeme.style.backgroundColor = `${event.target.value}`;
+    
+    console.log(event);    
+})
 
+
+spacing.addEventListener ("input", (event)=>{
+    bottomTextMeme.style.paddingTop = `${event.target.value}px`;
+    topTextMeme.style.paddingTop = `${event.target.value}px`;
+    bottomTextMeme.style.paddingBottom = `${event.target.value}px`;
+    topTextMeme.style.paddingBottom = `${event.target.value}px`;
+})
+
+lineSpacing.addEventListener ("click", (event)=>{
+    bottomTextMeme.style.lineHeight = `${event.target.value}px`;
+    topTextMeme.style.lineHeight = `${event.target.value}px`;
+    
 })
 
 
 
 
+// TEXT EDITOR ASIDE
+
+// ------ Variables -------
+
+let inputUrl = $ ('#url');
+let imageContainer = $ ('.image-container');
 
 
-/* 
-option.addEventListener ("click", (event)=>{
-    /* topTextMeme.innerText = event.target.value; */
- 
-
-  /*   if (event.target.id === 'arial'){
-        console.log ('soy 2');
-    } */
- 
-
+inputUrl.addEventListener ("input", (event)=>{
+    imageContainer.style.backgroundImage = `url("${event.target.value}")`;
+    
+})
 
 
 // EJERCICIO DE PRUEBA - FUNCIONA OK

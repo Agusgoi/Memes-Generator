@@ -79,8 +79,8 @@
 
         <aside id="editor">
 
-            <!-- Image Editor 
-        <section id="img-editor">
+            <!-- Image Editor -->
+        <section id="img-editor" class="aside">
         <h2>IMAGEN</h2>
         <div class="input-url">
             <h3 class="subtitles">URL</h3>
@@ -145,8 +145,8 @@
     </section>
  End Image Editor -->
 
- <!-- Text Editor-->
- <section id="txt-editor">
+ <!-- Text Editor  -->
+ <section id="txt-editor" class="aside">
     <h2>TEXTO</h2>
     <div class="input-top-txt">
         <h3 class="subtitles">SUPERIOR</h3>
@@ -204,7 +204,7 @@
             </div>
         </div>
         <div class="checkbox">
-            <input type="checkbox" id="checkbox">
+            <input type="checkbox" id="checkbox-back">
             <label for="checkbox" >Fondo transparente</label>
         </div>
     </div>
@@ -218,18 +218,18 @@
     </div>
     <div class="space">
         <h3 class="subtitles">ESPACIADO</h3>
-        <input type="number" class="input-space">
+        <input type="number" class="input-space" value="5" min="5" max="70" step="5">
     </div>
 
     <div class="input-line-spacing">
         <h3 class="subtitles">INTERLINEADO</h3>
         <select id="line-spacing" name="line-spacing" class="select-line-spacing">
-            <option value="1">Arial</option>
-            <option value="2">Arial</option>
-            <option value="3">Arial</option>
-            <option value="4">Arial</option>
-            <option value="5">Arial</option>
-            <option value="6">Arial</option>
+            <option value="35">0.8</option>
+            <option value="40">1</option>
+            <option value="45">1.2</option>
+            <option value="50">1.5</option>
+            <option value="60">2</option>
+            <option value="70">2.5</option>
     </div>
 
  End Text Editor-->
