@@ -163,7 +163,7 @@ main {
 h2 {
     color: #000000;
     font-size: 30px;
-    margin: 50px 0px;
+    margin: 30px 0px;
     align-self: center;
     
 }
@@ -171,22 +171,25 @@ h2 {
 h3 {
     color: #000000;
     font-size: 15px;
+    font-weight: 600;
 
 }
 
 
+
+
+
+.input-url, .input-background, .panel-range, .input-top-txt, .input-bottom-txt, .font, .panel-color-back, .input-color-font, .input-color-back, .color-font, .color-back, .font-outline, .space, .input-line-spacing, .input-img-colortype {
+    width: 100%;
+
+}
 
 
 
 
 /* TEXT EDITOR ASIDE*/
 
-.input-top-txt, .input-bottom-txt, .font, .panel-color-back, 
-.input-color-font, .input-color-back, .color-font, .color-back, 
-.font-outline, .space, .input-line-spacing {
-    width: 100%;
-  
-}
+
 
 .input-textarea1,.input-textarea2,.input-font {
     width: 100%;
@@ -195,6 +198,8 @@ h3 {
 
    
 }
+
+textarea::placeholder { color:#d3dbdf; }
 
 .checkbox {
     font-size: 15px;
@@ -248,15 +253,16 @@ h3 {
     padding: 10px;
     outline: none;
     color: #ffffff;
+    width: 100%;
 
 
 }
 
-.input-color-font, .input-color-back {
-background-color: transparent;
+.input-color-font, .input-color-back, .input-img-color {
 border: none;
-width: 20px;
-height: 20px;
+width: 40px;
+height: 20px; 
+background: transparent;
 appearance: none;
 cursor: pointer;
 }
@@ -299,10 +305,6 @@ textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3,
 
 /* IMAGE EDITOR ASIDE*/
 
-.input-url, .input-background, .panel-range {
-    width: 100%;
-
-}
 
 .panel-control-slider {
     display: flex;
@@ -324,7 +326,7 @@ textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3,
 }
 
 
-/* ::placeholder { color: #ffffff; } */
+#url::placeholder { color:#d3dbdf; }
 
 .color {
     display: flex;
@@ -332,20 +334,17 @@ textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3,
     
 }
 
-.input-img-color, .input-img-colortype {
-    width: 50%;
+.input-img-colortype {
     height: 30px;
     padding: 3px;
     background-color: var(--lightmode-darkblue);
     color: #ffffff;
     border: none;
     border-radius: 3%;
+    font-size: 17px;
 }
 
-#reset {
-    align-self: center;
-    padding: 5px;
-}
+
 
 .panel-control-slider input{
     appearance: none;
@@ -357,6 +356,14 @@ textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3,
     transition: opacity .2s;
     margin-bottom: 10px;
 }
+
+.panel-control-slider label {
+    margin-bottom: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
 
 .panel-control-slider input:hover {
 opacity: 1;
@@ -379,7 +386,13 @@ cursor: pointer;
 
 }
 
-
+.reset {
+    align-self: center;
+    padding: 10px;
+    background-color: var(--lightmode-darkblue);
+    color: #ffffff;
+    border: none;
+}
 
 
 /*  CLASES PARA DARKMODE */

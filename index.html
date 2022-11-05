@@ -34,8 +34,7 @@
                 <span class="span-mode">Modo Oscuro</span></i>
                 </button>
             </div>
-            <!-- <i class="fa-solid fa-lightbulb"></i>para hacer click en Modo Claro -->
-            <div class="title">
+                  <div class="title">
                 <h1>Generador de Memes</h1>
             </div>
         </div>
@@ -43,18 +42,12 @@
             <button class="btn-image">
                 <i class="fa-regular fa-image">
                 <span>Editar Imagen</span></i>
-            </button>
-
-            <!-- <i class="fa-solid fa-image"></i> -->
-            
+                </button>
 
             <button class="btn-text">
                 <i class="fa-solid fa-pen-nib"></i>
                     <span>Editar Texto</span></i>
             </button>
-
-            <!-- <i class="fa-regular fa-pen-nib"></i>
- -->
 
         </div>
     </header>
@@ -90,14 +83,21 @@
         <div class="input-background">
             <h3 class="subtitles">FONDO</h3>
             <div class="color">
-                <input id="color" type="text" name="color" class="input-img-color">
-                <select id="color-effect" name="color-effect" class="input-img-colortype">
-                        <option value="1">Ninguno</option>
-                        <option value="2">Aclarar</option>
-                        <option value="3">Oscurecer</option>
-                        <option value="4">Diferencia</option>
-                        <option value="5">Luminosidad</option>
-                        <option value="6">Multiplicar</option>
+                
+
+                <div class="cont-color">
+                    <input type="color" value="#FFFFFF" class="input-img-color">
+                    <span class="name-color-image">#FFFFFF</span>
+                </div>
+
+
+                <select name="color-effect" class="input-img-colortype">
+                        <option value="normal">Ninguno</option>
+                        <option value="lighten">Aclarar</option>
+                        <option value="darken">Oscurecer</option>
+                        <option value="difference">Diferencia</option>
+                        <option value="luminosity">Luminosidad</option>
+                        <option value="multiply">Multiplicar</option>
                 </select>
             </div>
         </div>
@@ -133,15 +133,15 @@
             </div>
             <div class="panel-control-slider">
                 <label for="saturation">SATURADO</label>
-                <input type="range" class="saturation" value="0" min="0" max="100" step="10">
+                <input type="range" class="saturation" value="100" min="100" max="1000" step="10">
             </div>
             <div class="panel-control-slider">
                 <label for="negative">NEGATIVO</label>
-                <input type="range" class="negative" value="1" min="0" max="1" step="0.1">
+                <input type="range" class="negative" value="0" min="0" max="1" step="0.1">
             </div>
 
         </div>
-        <button id="reset">Reestablecer filtros</button>
+        <button class="reset">Reestablecer filtros</button>
     </section>
  <!-- End Image Editor -->
 

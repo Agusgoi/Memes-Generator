@@ -106,7 +106,8 @@ let nameColor = $ ('.name-color');
 let nameColorBack = $ ('.name-color-back');
 let spacing = $ ('.input-space');
 let lineSpacing = $ ('#line-spacing');
-
+let imageBackColor = $ ('.input-img-color');
+let nameColorImage = $ ('.name-color-image');
 
 let contImage = $ ("#meme-container");
 
@@ -210,7 +211,6 @@ textBackColor.addEventListener ("change", (event)=>{
     textSup.style.backgroundColor = `${event.target.value}`;
     textInf.style.backgroundColor = `${event.target.value}`;
     
-    console.log(event);    
 })
 
 
@@ -246,6 +246,12 @@ let sepiaInput = $ ('.sepia');
 let hueInput = $ ('.hue');
 let saturationInput = $ ('.saturation');
 let negativeInput = $ ('.negative');
+let btnReset = $ ('.reset');
+
+let btnBlend = $ ('.input-img-colortype');
+
+
+
 
 // ------ Eventos -------
 
@@ -254,6 +260,69 @@ inputUrl.addEventListener ("input", (event)=>{
     imageContainer.style.backgroundImage = `url("${event.target.value}")`;
     
 })
+
+
+imageBackColor.addEventListener ("change", (event)=>{
+    nameColorImage.innerText = event.target.value;
+    imageContainer.style.backgroundColor = `${event.target.value}`; 
+
+})
+
+btnBlend.addEventListener ("change", (event)=>{
+    
+    imageContainer.style.backgroundBlendMode = `${event.target.value}`;
+})
+
+
+// ------ filtros -------
+
+
+const updateAllFilters = () => {
+imageContainer.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueInput.value}deg) saturate(${saturationInput.value}%) invert(${negativeInput.value}) `
+
+/* console.log (brightnessInput.value)
+console.log (opacityInput.value)
+console.log (contrastInput.value)
+console.log (blurInput.value)
+console.log (grayscaleInput.value)
+console.log (sepiaInput.value)
+console.log (hueInput.value)
+console.log (saturationInput.value)
+console.log (negativeInput.value) */
+};
+
+
+const reseatAllFilters = () => {
+    brightnessInput.value = 1;
+    opacityInput.value = 1;
+    contrastInput.value = 100;
+    blurInput.value = 0;
+    grayscaleInput.value = 0;
+    sepiaInput.value = 0;
+    hueInput.value = 0;
+    saturationInput.value = 100; 
+    negativeInput.value = 0;
+
+    updateAllFilters (); // para que el reset de los filtros se aplique en la imagen.
+}
+ 
+// Eventos Filtros
+
+
+brightnessInput.addEventListener ("change", (updateAllFilters));
+opacityInput.addEventListener ("change", (updateAllFilters));
+contrastInput.addEventListener ("change", (updateAllFilters));
+blurInput.addEventListener ("change", (updateAllFilters));
+grayscaleInput.addEventListener ("change", (updateAllFilters));
+sepiaInput.addEventListener ("change", (updateAllFilters));
+hueInput.addEventListener ("change", (updateAllFilters));
+saturationInput.addEventListener ("change", (updateAllFilters));
+negativeInput.addEventListener ("change", (updateAllFilters));
+btnReset.addEventListener ("click", (reseatAllFilters));
+
+
+
+
 
 // DESCARGAR MEME
 
@@ -268,57 +337,3 @@ const descargarMeme = () => {
 
 btnDownload.addEventListener("click", descargarMeme);
 
-
-
-
-const updateAllFilters = () => {
-imageContainer.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueInput.value}deg) saturate(${saturationInput.value}%) invert(${negativeInput.value})`
-
-};
-
-
-const reseatAllFilters = () => {
-
-}
-
-// Eventos Filtros
-
-
-brightnessInput.addEventListener ("change", (updateAllFilters));
-opacityInput.addEventListener ("change", (updateAllFilters));
-contrastInput.addEventListener ("change", (updateAllFilters));
-blurInput.addEventListener ("change", (updateAllFilters));
-grayscaleInput.addEventListener ("change", (updateAllFilters));
-sepiaInput.addEventListener ("change", (updateAllFilters));
-hueInput.addEventListener ("change", (updateAllFilters));
-saturationInput.addEventListener ("change", (updateAllFilters));
-negativeInput.addEventListener ("change", (updateAllFilters));
-
-
-
-
-
-
-/* function filtros () {
-    contenedorMeme.style.filter = `brightness(${brillo.value}) opacity(${opacidad.value}%) contrast(${contraste.value}%) blur(${desenfoque.value}px) grayscale(${escalaGrises.value}%) sepia(${sepia.value}%) hue-rotate(${hue.value}deg) saturate(${saturacion.value}%) invert(${negativo.value}))`;
-
-};
-
-
-
-
-const botonReestablecer = document.getElementById('botonReestablecer');
-
-botonReestablecer.addEventListener('click', ()=>{
-    brillo.value = 1;
-    opacidad.value = 1;
-    contraste.value = 100;
-    desenfoque.value = 0;
-    escalaGrises.value = 0;
-    sepia.value = 0;
-    hue.value = 0;
-    saturacion.value = 100;
-    negativo.value = 0;
-    filtros();
-});
- */
