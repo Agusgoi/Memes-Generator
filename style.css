@@ -54,14 +54,13 @@ h1{
 }
 
 
-#mode {
+.mode {
     padding: 1%;
     border: none;
     font-size: 17px;
     margin: 1%;
     cursor: pointer;
     background-color: var(--lightmode-green);
-    background-color: yellow;
     
 }
 
@@ -72,7 +71,7 @@ h1{
 
 }
 
-#btn-image, #btn-text {
+.btn-image, .btn-text {
     padding: 1%;
     border: none;
     font-size: 17px;
@@ -144,7 +143,7 @@ main {
 
 /* ASIDE */
 
-.aside {
+.img-aside, .txt-aside {
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -159,11 +158,6 @@ main {
     gap: 20px;
   
 }
-
-/* #txt-editor {
-    display: none;
-}
- */
 
 
 h2 {
@@ -194,10 +188,11 @@ h3 {
   
 }
 
-#top-txt, #bottom-txt, #font-type {
+.input-textarea1,.input-textarea2,.input-font {
     width: 100%;
     height: 30px;
     font-size:17px;
+
    
 }
 
@@ -228,7 +223,7 @@ h3 {
 
 }
 
-.btn-align {
+.btn-align1,.btn-align2, .btn-align3 {
     width: 34%;
     margin-left: 5px;
     cursor: pointer;
@@ -252,6 +247,7 @@ h3 {
     align-items: center;
     padding: 10px;
     outline: none;
+    color: #ffffff;
 
 
 }
@@ -273,9 +269,6 @@ cursor: pointer;
  */
 
 
-
-
-
 .outline-type {
     display: flex;
     justify-content: space-around;
@@ -283,7 +276,7 @@ cursor: pointer;
 
 }
 
-.btn-outline, .input-space, .select-line-spacing {
+.btn-outline1, .btn-outline2, .btn-outline3, .input-space, .select-line-spacing {
     width: 100%;
     height: 30px;
 }
@@ -292,7 +285,8 @@ cursor: pointer;
     cursor: pointer;
 }
 
-textarea, #font-type, .font-size, .btn-align, .btn-outline, .input-space, .select-line-spacing {
+textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3, 
+.btn-outline1, .btn-outline2, .btn-outline3, .input-space, .select-line-spacing {
     background-color: var(--lightmode-darkblue);
     padding: 3px;
     border: none;
@@ -330,7 +324,7 @@ textarea, #font-type, .font-size, .btn-align, .btn-outline, .input-space, .selec
 }
 
 
-::placeholder { color: #ffffff; }
+/* ::placeholder { color: #ffffff; } */
 
 .color {
     display: flex;
@@ -348,12 +342,12 @@ textarea, #font-type, .font-size, .btn-align, .btn-outline, .input-space, .selec
     border-radius: 3%;
 }
 
-#refresh {
+#reset {
     align-self: center;
     padding: 5px;
 }
 
-.range{
+.panel-control-slider input{
     appearance: none;
     background: var(--lightmode-darkblue);
     border-radius: 10px;
@@ -364,12 +358,12 @@ textarea, #font-type, .font-size, .btn-align, .btn-outline, .input-space, .selec
     margin-bottom: 10px;
 }
 
-.range:hover {
+.panel-control-slider input:hover {
 opacity: 1;
 }
 
 
-.range::-webkit-slider-thumb {
+.panel-control-slider input::-webkit-slider-thumb {
 appearance: none;
 width: 15px;
 height: 15px; 
@@ -379,22 +373,12 @@ cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-width: 25px; /* Set a specific slider handle width */
-height: 25px; /* Slider handle height */
-background: #04AA6D; /* Green background */
-cursor: pointer; /* Cursor on hover */
+width: 25px;
+height: 25px; 
+cursor: pointer; 
+
 }
 
-
-/* PARA JS - RANGE:
- var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
-output.innerHTML = slider.value; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function() {
-  output.innerHTML = this.value;
-} */
 
 
 
@@ -402,15 +386,9 @@ slider.oninput = function() {
 
 .darkmode-header {
     color: #ffffff;
-    background-color: var(--darkmode-black);
-    
+    background-color: var(--darkmode-black);  
 }
 
-.darkmode-btn {
-    color: #ffffff;
-    background-color: red;
-        
-}
 
 .darkmode-back {
     background-color: var(--darkmode-lightgrey);

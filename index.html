@@ -29,9 +29,9 @@
     <header>
         <div class="title-btn">
             <div class="cont-btn-mode">
-                <button id="mode" >
+                <button class="mode" >
                 <i class="fa-regular fa-lightbulb">
-                <span>Modo Claro</span></i>
+                <span class="span-mode">Modo Oscuro</span></i>
                 </button>
             </div>
             <!-- <i class="fa-solid fa-lightbulb"></i>para hacer click en Modo Claro -->
@@ -40,7 +40,7 @@
             </div>
         </div>
         <div class="buttons-editor">
-            <button id="btn-image">
+            <button class="btn-image">
                 <i class="fa-regular fa-image">
                 <span>Editar Imagen</span></i>
             </button>
@@ -48,7 +48,7 @@
             <!-- <i class="fa-solid fa-image"></i> -->
             
 
-            <button id="btn-text">
+            <button class="btn-text">
                 <i class="fa-solid fa-pen-nib"></i>
                     <span>Editar Texto</span></i>
             </button>
@@ -66,9 +66,9 @@
         <!-- Section Meme Container -->
         <section class="section-meme">
             <div id="meme-container">
-                <p id="textOne" class="text-1">TEXTO SUPERIOR</p>
+                <p  class="text-1">TEXTO SUPERIOR</p>
                 <div class="image-container"></div>
-                <p id="textTwo" class="text-2">TEXTO INFERIOR</p>
+                <p  class="text-2">TEXTO INFERIOR</p>
             </div>
            <button id="download">Descargar Meme</button>       
         </section>
@@ -80,7 +80,7 @@
         <aside id="editor">
 
             <!-- Image Editor -->
-        <section id="img-editor" class="aside">
+        <section class="img-aside">
         <h2>IMAGEN</h2>
         <div class="input-url">
             <h3 class="subtitles">URL</h3>
@@ -105,52 +105,52 @@
         <div class="panel-range">
             <div class="panel-control-slider">
                 <label for="brightness">BRILLO</label>
-                <input type="range" id="brightness" class="range" value="50">
+                <input type="range" class="brightness" value="1" min="0" max="1" step="0.1">
             </div>
             <div class="panel-control-slider">
                 <label for="opacity">OPACIDAD</label>
-                <input type="range" id="opacity" class="range" value="50">
+                <input type="range" class="opacity" value="1" min="0" max="1" step="0.1">
             </div>
             <div class="panel-control-slider">
                 <label for="contrast">CONTRASTE</label>
-                <input type="range" id="contrast" class="range" value="50">
+                <input type="range" class="contrast" value="100" min="100" max="1000" step="1">
             </div>
             <div class="panel-control-slider">
                 <label for="blur">DESENFOQUE</label>
-                <input type="range" id="blur" class="range" value="50">
+                <input type="range" class="blur" value="0" min="0" max="10" step="0.1">
             </div>
             <div class="panel-control-slider">
                 <label for="grayscale">ESCALA DE GRISES</label>
-                <input type="range" id="grayscale" class="range" value="50">
+                <input type="range" class="grayscale" value="0" min="0" max="100" step="1">
             </div>
             <div class="panel-control-slider">
                 <label for="sepia">SEPIA</label>
-                <input type="range" id="sepia" class="range" value="50">
+                <input type="range" class="sepia" value="0" min="0" max="100" step="1">
             </div>
             <div class="panel-control-slider">
                 <label for="hue">HUE</label>
-                <input type="range" id="hue" class="range" value="50">
+                <input type="range" class="hue" value="0" min="0" max="359" step="1">
             </div>
             <div class="panel-control-slider">
                 <label for="saturation">SATURADO</label>
-                <input type="range" id="saturation" class="range" value="50">
+                <input type="range" class="saturation" value="0" min="0" max="100" step="10">
             </div>
             <div class="panel-control-slider">
                 <label for="negative">NEGATIVO</label>
-                <input type="range" id="negative" class="range" value="50">
+                <input type="range" class="negative" value="1" min="0" max="1" step="0.1">
             </div>
 
         </div>
-        <button id="refresh">Reestablecer filtros</button>
+        <button id="reset">Reestablecer filtros</button>
     </section>
- End Image Editor -->
+ <!-- End Image Editor -->
 
  <!-- Text Editor  -->
- <section id="txt-editor" class="aside">
+ <section class="txt-aside">
     <h2>TEXTO</h2>
     <div class="input-top-txt">
         <h3 class="subtitles">SUPERIOR</h3>
-        <textarea name="top-txt" id="top-txt" placeholder="Texto Superior"></textarea>
+        <textarea name="top-txt" class="input-textarea1" placeholder="Texto Superior"></textarea>
         <div class="checkbox">
             <input type="checkbox" id="checkbox-top">
             <label for="checkbox-top" >Sin Texto Superior</label>
@@ -158,7 +158,7 @@
     </div>
     <div class="input-bottom-txt">
             <h3 class="subtitles">INFERIOR</h3>
-            <textarea name="bottom-txt" id="bottom-txt" placeholder="Texto Inferior"></textarea>
+            <textarea name="bottom-txt" class="input-textarea2" placeholder="Texto Inferior"></textarea>
             <div class="checkbox">
                 <input type="checkbox" id="checkbox-bottom">
                 <label for="checkbox-bottom" >Sin Texto Inferior</label>
@@ -167,7 +167,7 @@
 
     <div class="font">
         <h3 class="subtitles">FUENTE</h3>
-        <select  id="font-type" name="font-type">
+        <select  class="input-font" name="font-type">
             <option value="arial">Arial</option>
             <option value="courier">Courier New</option>
             <option value="lucida">Lucida Sans</option>
@@ -179,9 +179,9 @@
         <div class="font-selector">
             <input class="font-size" type="number" value="40" min="20" max="60">
             <div class="text-align">
-                <button id="left-align" class="btn-align"><i class="fa-solid fa-align-left"></i></button>
-                <button id="center-align" class="btn-align"><i class="fa-solid fa-align-center"></i></button>
-                <button id="right-align" class="btn-align"><i class="fa-solid fa-align-right"></i></button>
+                <button  class="btn-align1"><i class="fa-solid fa-align-left"></i></button>
+                <button  class="btn-align2"><i class="fa-solid fa-align-center"></i></button>
+                <button  class="btn-align3"><i class="fa-solid fa-align-right"></i></button>
             </div>
         </div>
     </div>
@@ -211,9 +211,9 @@
     <div class="font-outline">
         <h3 class="subtitles">CONTORNO</h3>
         <div class="outline-type">
-            <button id="none-out" class="btn-outline">Ninguno</button>
-            <button id="white-out" class="btn-outline">Blanco</button>
-            <button id="black-out" class="btn-outline">Negro</button>
+            <button class="btn-outline1">Ninguno</button>
+            <button class="btn-outline2">Blanco</button>
+            <button  class="btn-outline3">Negro</button>
         </div>
     </div>
     <div class="space">
@@ -232,7 +232,7 @@
             <option value="70">2.5</option>
     </div>
 
- End Text Editor-->
+ <!-- End Text Editor-->
 
 
 
