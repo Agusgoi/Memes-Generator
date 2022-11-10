@@ -100,7 +100,7 @@ btnMode.addEventListener ("click", (event)=> {
     lineSpacing.classList.toggle ("darkmode-header");
     spacing.classList.toggle ("darkmode-header");
     titles.classList.toggle ("darkmode-aside");
-    subtitles.classList.toggle ("darkmode-aside");
+    subtitles.classList.toggle ("darkmode"); // NO SE APLICA
 
     // NO SE APLICA NI A LOS INPUT INDIV NI A LOS DIV
     fontColor.classList.toggle ("darkmode-header");

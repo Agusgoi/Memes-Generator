@@ -408,6 +408,10 @@ cursor: pointer;
     color: #ffffff;
 }
 
+.darkmode .subtitles {
+    color: #ffffff;
+}
+
 .display-none {
     display: none;
 }
@@ -416,7 +420,7 @@ cursor: pointer;
 /* =============== RESPONSIVE DESIGN =============== */
 
 
-/* ------ MAX-WIDTH 880px ------ */
+/* --------- MAX-WIDTH 880px ---------- */
 
 
 @media screen and (max-width: 880px) {
@@ -522,11 +526,37 @@ textarea, .input-textarea1,.input-textarea2, .input-font, .font-size, .btn-align
 }
 
 
+/* --------- MAX-WIDTH 768px ---------- */
+
+@media screen and (max-width: 768px) {
+
+
+    /*max-width 768px - Header*/
+
+
+    h1{
+        font-size: 30px;
+    }
+
+    header {
+        padding-right: 25%;
+    }
+
+    .mode, .btn-image, .btn-text {
+        font-size: 13px;
+    }
+
+
+    /*max-width 768px - Main*/
+
+    .section-meme{
+        padding-right: 25%;
+    }
+    
 
 
 
-
-
+}
 
 
 
