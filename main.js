@@ -59,6 +59,7 @@ let btnReset = $ ('.reset');
 let btnBlend = $ ('.input-img-colortype');
 
 let btnDownload = $ ("#download");
+let btnClose = $ (".close");
 
 
 // CAMBIO DE MODE ==============================================================
@@ -121,8 +122,12 @@ btnImage.addEventListener ("click", (event)=>{
      
 })
 
-
-
+//ambos botones con la misma clase, el evento solo se aplica en el primero
+btnClose.addEventListener ("click", (event)=>{
+    asideText.classList.add ("display-none");
+    asideImage.classList.add  ("display-none");
+     
+})
 
 
 // TEXT EDITOR ASIDE =========================================================
