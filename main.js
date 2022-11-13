@@ -1,19 +1,21 @@
 
 
-const $ = (selector) => document.querySelector (selector);
-
-
-
-// --------------- Variables ---------------
+// --------------- VARIABLES ---------------
 
 
 //general
+const $ = (selector) => document.querySelector (selector);
 let header = $ ('header');
 let section = $ ('.section-meme');
 let asideText = $ ('.txt-aside');
 let asideImage = $ ('.img-aside');
 let contImage = $ ("#meme-container");
 let imageContainer = $ ('.image-container');
+let sectionwidht = section.clientWidth
+
+
+
+
 
 //textos
 let titleTxt = $ ('.h2-txt');
@@ -61,9 +63,6 @@ let btnDownload = $ (".download");
 let btnCloseTxt = $ (".close-txt");
 let btnCloseImg = $ (".close-img");
 let btnReset = $ ('.reset');
-let filterInputs = $ ('.panel-control-slider input');
-
-
 
 //checkboxs
 let checkboxTop = $ ('#checkbox-top');
@@ -82,7 +81,7 @@ let saturationInput = $ ('.saturation');
 let negativeInput = $ ('.negative');
 
 
-
+ 
 
 
 // CAMBIO DE MODE ==============================================================
@@ -142,7 +141,7 @@ btnMode.addEventListener ("click", (event)=> {
     inputUrl.classList.toggle ("darkmode-header");
     btnBlend.classList.toggle ("darkmode-header");
     btnReset.classList.toggle ("darkmode-header");
-    brightnessInput.classList.toggle ("darkmode-header"); //no funciona ni agrupand lo inpus de filtros ni asi, individualmente
+    brightnessInput.classList.toggle ("darkmode-header"); //no funciona ni agrupand0 lo inputs de filtros ni asi, individualmente    
 })
 
 
@@ -204,12 +203,10 @@ topTextImput.addEventListener ("input", (event)=>{
 
 checkboxTop.addEventListener ("click", (event)=>{
  textSup.classList.toggle ("display-none");
-    console.log (event);
 })
 
 checkboxBottom.addEventListener ("click", (event)=>{
     textInf.classList.toggle ("display-none");
-    console.log (event);
 })
 
 fontSize.addEventListener ("input", (event)=>{
@@ -221,7 +218,6 @@ fontSize.addEventListener ("input", (event)=>{
 fontSelect.addEventListener ("click", (event)=>{
     textSup.style.fontFamily = `${event.target.value}`;
     textInf.style.fontFamily = `${event.target.value}`;
-  
 })
   
 leftAlign.addEventListener ("click", (event)=>{
@@ -270,7 +266,6 @@ colorTxtBackInput.addEventListener ("change", (event)=>{
     nameColorBack.innerText = event.target.value;
     textSup.style.backgroundColor = `${event.target.value}`;
     textInf.style.backgroundColor = `${event.target.value}`;
-    
 })
 
 
@@ -337,16 +332,12 @@ btnReset.addEventListener ("click", (reseatAllFilters));
 
 
 inputUrl.addEventListener ("input", (event)=>{
-    imageContainer.style.backgroundImage = `url("${event.target.value}")`;
-    
+    imageContainer.style.backgroundImage = `url("${event.target.value}")`; 
 })
-
-
 
 imageBackColor.addEventListener ("change", (event)=>{
     nameColorImage.innerText = event.target.value;
     imageContainer.style.backgroundColor = `${event.target.value}`; 
-
 })
 
 btnBlend.addEventListener ("change", (event)=>{
@@ -354,11 +345,13 @@ btnBlend.addEventListener ("change", (event)=>{
 })
 
 
-// DESCARGAR MEME ====================================================
+
+
+// DESCARGAR MEME / RESPONSIVE ====================================================
 
 
 
-// --------------- Funcion ---------------
+// --------------- Funciones ---------------
 
 const descargarMeme = () => {
   domtoimage.toBlob(contImage).then(function (blob) {
@@ -367,30 +360,15 @@ const descargarMeme = () => {
 };
 
 
+
+if (sectionwidht <= '768')  {
+    spanMode.classList.add ("display-none");
+ }
+
+
+
 // --------------- Evento ---------------
 
 
 btnDownload.addEventListener("click", descargarMeme);
 
-
-
-/* 
-const mq = window.matchMedia ("(min-width: 768px)");
-
-if (mq.matches) {
-    console.log('la anchura del documento es 500px o mayor')
-  } else {
-    console.log('la anchura del documento es menos 500px')
-  }
-
-  if (mq.matches) {
-    titles.style.color = 'red';
-    //spanMode.classList.add ("display-none");
-  }
-
-  if (matchMedia) {
-    mq.addListener(cambioDeAnchura);
-    cambioDeAnchura(mq);
-  }
-  
- */
