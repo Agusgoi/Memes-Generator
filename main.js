@@ -6,46 +6,71 @@ const $ = (selector) => document.querySelector (selector);
 
 // --------------- Variables ---------------
 
-let btnMode = $ ('.mode');
-let spanMode = $ ('.span-mode');
+
+//general
 let header = $ ('header');
 let section = $ ('.section-meme');
 let asideText = $ ('.txt-aside');
 let asideImage = $ ('.img-aside');
-let btnText = $ ('.btn-text');
-let btnImage = $ ('.btn-image');
-let titles = $ ('h2');
-let subtitles = $ ('.subtitles');
+let contImage = $ ("#meme-container");
+let imageContainer = $ ('.image-container');
 
-let topTextImput = $ ('.input-textarea1');
-let bottomTextImput = $ ('.input-textarea2');
+//textos
+let titleTxt = $ ('.h2-txt');
+let titleImg = $ ('.h2-img');
+let subtUno = $ ('.subt1');
+let subtDos = $ ('.subt2');
+let subtTres = $ ('.subt3');
+let subtCuatro = $ ('.subt4');
+let subtCinco = $ ('.subt5');
+let subtSeis = $ ('.subt6');
+let subtSiete = $ ('.subt7');
+let subtOcho = $ ('.subt8');
+let subtNueve = $ ('.subt9');
+let subtDiez = $ ('.subt10');
+let spanMode = $ ('.span-mode');
+let nameColor = $ ('.name-color');
+let nameColorBack = $ ('.name-color-back');
+let nameColorImage = $ ('.name-color-image');
 let textSup = $ ('.text-1');
 let textInf = $ ('.text-2');
-let contImage = $ ("#meme-container");
-let checkboxTop = $ ('#checkbox-top');
-let checkboxBottom = $ ('#checkbox-bottom');
-let checkboxBack = $ ('#checkbox-back');
 
+//inputs/botones
+let inputUrl = $ ('.url');
+let topTextImput = $ ('.input-textarea1');
+let bottomTextImput = $ ('.input-textarea2');
 let fontSize = $ ('.font-size');
 let fontSelect = $ ('.input-font');
+let colorImgInput = $ ('.cont-color1');
+let colorFontInput = $ ('.cont-color2');
+let colorTxtBackInput = $ ('.cont-color3');
+let spacing = $ ('.input-space');
+let lineSpacing = $ ('#line-spacing');
+let imageBackColor = $ ('.input-img-color');
+let btnBlend = $ ('.input-img-colortype');
 let leftAlign = $ ('.btn-align1');
 let centerAlign = $ ('.btn-align2');
 let rightAlign = $ ('.btn-align3');
 let noneOut = $ ('.btn-outline1');
 let whiteOut = $ ('.btn-outline2');
 let blackOut = $ ('.btn-outline3');
-let fontColor = $ ('.input-color-font');
-let textBackColor = $ ('.input-color-back');
-let colorInputs = $ ('.cont-color');
-let nameColor = $ ('.name-color');
-let nameColorBack = $ ('.name-color-back');
-let spacing = $ ('.input-space');
-let lineSpacing = $ ('#line-spacing');
-let imageBackColor = $ ('.input-img-color');
-let nameColorImage = $ ('.name-color-image');
+let btnMode = $ ('.mode');
+let btnText = $ ('.btn-text');
+let btnImage = $ ('.btn-image');
+let btnDownload = $ (".download");
+let btnCloseTxt = $ (".close-txt");
+let btnCloseImg = $ (".close-img");
+let btnReset = $ ('.reset');
+let filterInputs = $ ('.panel-control-slider input');
 
-let inputUrl = $ ('#url');
-let imageContainer = $ ('.image-container');
+
+
+//checkboxs
+let checkboxTop = $ ('#checkbox-top');
+let checkboxBottom = $ ('#checkbox-bottom');
+let checkboxBack = $ ('#checkbox-back');
+
+//filtros
 let brightnessInput = $ ('.brightness');
 let opacityInput = $ ('.opacity');
 let contrastInput = $ ('.contrast');
@@ -55,11 +80,9 @@ let sepiaInput = $ ('.sepia');
 let hueInput = $ ('.hue');
 let saturationInput = $ ('.saturation');
 let negativeInput = $ ('.negative');
-let btnReset = $ ('.reset');
-let btnBlend = $ ('.input-img-colortype');
 
-let btnDownload = $ ("#download");
-let btnClose = $ (".close");
+
+
 
 
 // CAMBIO DE MODE ==============================================================
@@ -100,13 +123,26 @@ btnMode.addEventListener ("click", (event)=> {
     whiteOut.classList.toggle ("darkmode-header");
     lineSpacing.classList.toggle ("darkmode-header");
     spacing.classList.toggle ("darkmode-header");
-    titles.classList.toggle ("darkmode-aside");
-    subtitles.classList.toggle ("darkmode"); // NO SE APLICA
-
-    // NO SE APLICA NI A LOS INPUT INDIV NI A LOS DIV
-    fontColor.classList.toggle ("darkmode-header");
-    textBackColor.classList.toggle ("darkmode-header");
-    colorInputs.classList.toggle ("darkmode-header"); 
+    titleImg.classList.toggle ("darkmode-txt");
+    titleTxt.classList.toggle ("darkmode-txt");
+    subtUno.classList.toggle ("darkmode-txt");
+    subtDos.classList.toggle ("darkmode-txt");
+    subtTres.classList.toggle ("darkmode-txt");
+    subtCuatro.classList.toggle ("darkmode-txt");
+    subtCinco.classList.toggle ("darkmode-txt");
+    subtSeis.classList.toggle ("darkmode-txt");
+    subtSiete.classList.toggle ("darkmode-txt"); 
+    subtOcho.classList.toggle ("darkmode-txt"); 
+    subtNueve.classList.toggle ("darkmode-txt"); 
+    subtDiez.classList.toggle ("darkmode-txt"); 
+    colorFontInput.classList.toggle ("darkmode-header");
+    colorImgInput.classList.toggle ("darkmode-header");
+    colorTxtBackInput.classList.toggle ("darkmode-header"); 
+    btnDownload.classList.toggle ("darkmode-header"); 
+    inputUrl.classList.toggle ("darkmode-header");
+    btnBlend.classList.toggle ("darkmode-header");
+    btnReset.classList.toggle ("darkmode-header");
+    brightnessInput.classList.toggle ("darkmode-header"); //no funciona ni agrupand lo inpus de filtros ni asi, individualmente
 })
 
 
@@ -122,10 +158,13 @@ btnImage.addEventListener ("click", (event)=>{
      
 })
 
-//ambos botones con la misma clase, el evento solo se aplica en el primero
-btnClose.addEventListener ("click", (event)=>{
-    asideText.classList.add ("display-none");
+btnCloseImg.addEventListener ("click", (event)=>{
     asideImage.classList.add  ("display-none");
+     
+})
+
+btnCloseTxt.addEventListener ("click", (event)=>{
+    asideText.classList.add ("display-none");
      
 })
 
@@ -220,14 +259,14 @@ blackOut.addEventListener ("click", (event)=>{
     textInf.style.webkitTextStrokeColor = 'black';
 })
 
-fontColor.addEventListener ("change", (event)=>{
+colorFontInput.addEventListener ("change", (event)=>{
     nameColor.innerText = event.target.value;
     textSup.style.color = `${event.target.value}`;
     textInf.style.color = `${event.target.value}`;
 
 })
 
-textBackColor.addEventListener ("change", (event)=>{
+colorTxtBackInput.addEventListener ("change", (event)=>{
     nameColorBack.innerText = event.target.value;
     textSup.style.backgroundColor = `${event.target.value}`;
     textInf.style.backgroundColor = `${event.target.value}`;
@@ -302,6 +341,8 @@ inputUrl.addEventListener ("input", (event)=>{
     
 })
 
+
+
 imageBackColor.addEventListener ("change", (event)=>{
     nameColorImage.innerText = event.target.value;
     imageContainer.style.backgroundColor = `${event.target.value}`; 
@@ -331,3 +372,25 @@ const descargarMeme = () => {
 
 btnDownload.addEventListener("click", descargarMeme);
 
+
+
+/* 
+const mq = window.matchMedia ("(min-width: 768px)");
+
+if (mq.matches) {
+    console.log('la anchura del documento es 500px o mayor')
+  } else {
+    console.log('la anchura del documento es menos 500px')
+  }
+
+  if (mq.matches) {
+    titles.style.color = 'red';
+    //spanMode.classList.add ("display-none");
+  }
+
+  if (matchMedia) {
+    mq.addListener(cambioDeAnchura);
+    cambioDeAnchura(mq);
+  }
+  
+ */

@@ -63,7 +63,7 @@
                 <div class="image-container"></div>
                 <p  class="text-2">TEXTO INFERIOR</p>
             </div>
-           <button id="download">Descargar Meme</button>       
+           <button class="download">Descargar Meme</button>       
         </section>
 
         <!-- End Section Meme Container -->
@@ -74,19 +74,19 @@
 
             <!-- Image Editor -->
         <section class="img-aside">
-            <button class="close">X</button>
-        <h2>IMAGEN</h2>
+            <button class="close-img">X</button>
+        <h2 class="h2-img">IMAGEN</h2>
         <div class="input-url">
-            <h3 class="subtitles">URL</h3>
-            <input id="url" type="text" name="url" required placeholder="Copia aca el link">
+            <h3 class="subt1">URL</h3>
+            <input class="url" type="text" name="url" required placeholder="Copia aca el link">
         </div>
        
         <div class="input-background">
-            <h3 class="subtitles">FONDO</h3>
+            <h3 class="subt2">FONDO</h3>
             <div class="color">
                 
 
-                <div class="cont-color">
+                <div class="cont-color1">
                     <input type="color" value="#FFFFFF" class="input-img-color">
                     <span class="name-color-image">#FFFFFF</span>
                 </div>
@@ -148,10 +148,10 @@
 
  <!-- Text Editor  -->
  <section class="txt-aside">
-    <button class="close">X</button>
-    <h2>TEXTO</h2>
+    <button class="close-txt">X</button>
+    <h2 class="h2-txt">TEXTO</h2>
     <div class="input-top-txt">
-        <h3 class="subtitles">SUPERIOR</h3>
+        <h3 class="subt3">SUPERIOR</h3>
         <textarea name="top-txt" class="input-textarea1" placeholder="Texto Superior"></textarea>
         <div class="checkbox">
             <input type="checkbox" id="checkbox-top">
@@ -159,7 +159,7 @@
         </div>
     </div>
     <div class="input-bottom-txt">
-            <h3 class="subtitles">INFERIOR</h3>
+            <h3 class="subt4">INFERIOR</h3>
             <textarea name="bottom-txt" class="input-textarea2" placeholder="Texto Inferior"></textarea>
             <div class="checkbox">
                 <input type="checkbox" id="checkbox-bottom">
@@ -168,7 +168,7 @@
     </div>
 
     <div class="font">
-        <h3 class="subtitles">FUENTE</h3>
+        <h3 class="subt5">FUENTE</h3>
         <select  class="input-font" name="font-type">
             <option value="arial">Arial</option>
             <option value="courier">Courier New</option>
@@ -191,15 +191,15 @@
     <div class="panel-color-back">
         <div class="color-font-back">
             <div class="color-font">
-                <h3 class="subtitles">COLOR</h3>
-                <div class="cont-color">
+                <h3 class="subt6">COLOR</h3>
+                <div class="cont-color2">
                     <input type="color" value="#000000" class="input-color-font">
                     <span class="name-color">#000000</span>
                 </div>
             </div>
             <div class="color-back">
-                <h3 class="subtitles">FONDO</h3>
-                <div class="cont-color">
+                <h3 class="subt7">FONDO</h3>
+                <div class="cont-color3">
                     <input type="color" value="#FFFFFF" class="input-color-back">
                     <span class="name-color-back">#FFFFFF</span>
                 </div>
@@ -211,7 +211,7 @@
         </div>
     </div>
     <div class="font-outline">
-        <h3 class="subtitles">CONTORNO</h3>
+        <h3 class="subt8">CONTORNO</h3>
         <div class="outline-type">
             <button class="btn-outline1">Ninguno</button>
             <button class="btn-outline2">Blanco</button>
@@ -219,12 +219,12 @@
         </div>
     </div>
     <div class="space">
-        <h3 class="subtitles">ESPACIADO</h3>
+        <h3 class="subt9">ESPACIADO</h3>
         <input type="number" class="input-space" value="5" min="5" max="70" step="5">
     </div>
 
     <div class="input-line-spacing">
-        <h3 class="subtitles">INTERLINEADO</h3>
+        <h3 class="subt10">INTERLINEADO</h3>
         <select id="line-spacing" name="line-spacing" class="select-line-spacing">
             <option value="35">0.8</option>
             <option value="40">1</option>

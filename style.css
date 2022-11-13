@@ -131,7 +131,7 @@ main {
 }
 
 
-#download {
+.download {
     border: none;
     margin-top: 30px;
     padding: 15px;
@@ -160,7 +160,7 @@ main {
 }
 
 
-h2 {
+.h2-txt, .h2-img {
     color: #000000;
     font-size: 30px;
     margin-bottom: 25px;
@@ -168,10 +168,11 @@ h2 {
     
 }
 
-h3 {
+.subt1, .subt2, .subt3, .subt4, .subt5, .subt6, .subt7, .subt8, .subt9, .subt10  {
     color: #000000;
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 3px;
 
 }
 
@@ -181,13 +182,14 @@ h3 {
 
 }
 
-.close {
+.close-img, .close-txt {
     font-weight: 600;
     font-size: 17px;
     align-self: flex-end;
     border: none;
     font-family: Arial, Helvetica, sans-serif;
     background-color: transparent;
+    cursor: pointer;
 
 }
 
@@ -200,8 +202,7 @@ h3 {
     width: 100%;
     height: 30px;
     font-size:17px;
-
-   
+ 
 }
 
 textarea::placeholder { color:#d3dbdf; }
@@ -246,7 +247,7 @@ textarea::placeholder { color:#d3dbdf; }
 
 }
 
-.cont-color {
+.cont-color1, .cont-color2, .cont-color3 {
     display: flex;
     background-color: var(--lightmode-darkblue);
     height: 30px;
@@ -260,6 +261,7 @@ textarea::placeholder { color:#d3dbdf; }
     color: #ffffff;
     width: 100%;
     font-size: 17px;
+
 
 
 }
@@ -313,7 +315,7 @@ textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3,
     
 }
 
-#url {
+.url {
     width: 100%;
     height: 30px;
     font-size:17px;
@@ -326,7 +328,7 @@ textarea, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3,
 }
 
 
-#url::placeholder { color:#d3dbdf; }
+.url::placeholder { color:#d3dbdf; }
 
 .color {
     display: flex;
@@ -414,7 +416,7 @@ cursor: pointer;
     color: #ffffff;
 }
 
-.darkmode .subtitles {
+.darkmode-txt {
     color: #ffffff;
 }
 
@@ -454,7 +456,8 @@ cursor: pointer;
 }
 
 
-#download {
+
+.download {
     margin-top: 20px;
     padding: 15px;
     font-size: 15px;
@@ -470,13 +473,17 @@ cursor: pointer;
     gap: 15px;
 }
 
-h2 {
+.h2-txt, .h2-img {
     font-size: 25px;
     margin: 20px 0px;  
 }
 
-h3 {
+.subt1, .subt2, .subt3, .subt4, .subt5, .subt6, .subt7, .subt8, .subt9, .subt10 {
     font-size: 12px;
+}
+
+.close-img, .close-txt {
+    font-size: 14px;
 }
 
  /*max-width 880px - Text Editor Aside*/
@@ -492,7 +499,7 @@ h3 {
 }
 
 textarea, .input-textarea1,.input-textarea2, .input-font, .font-size, .btn-align1, .btn-align2, .btn-align3, .text-align,
-.btn-outline1, .btn-outline2, .btn-outline3, .input-space, .select-line-spacing, .cont-color {
+.btn-outline1, .btn-outline2, .btn-outline3, .input-space, .select-line-spacing, .cont-color1, .cont-color2, .cont-color3 {
     font-size: 13px;
     height: 25px;
 
@@ -504,7 +511,7 @@ textarea, .input-textarea1,.input-textarea2, .input-font, .font-size, .btn-align
     margin-bottom: 3px;   
 }
 
-#url, .input-img-colortype {
+.url, .input-img-colortype {
     height: 25px;
     font-size:13px;    
 }
@@ -573,7 +580,6 @@ textarea, .input-textarea1,.input-textarea2, .input-font, .font-size, .btn-align
 
 // CHEQUEAR TAMANIO DE LA FOTO QUE SE INGRESA
 // CUANDO SE ESCRIBE MUCHO EL TEXTO NO SE MANTIENE EN EL DIV, SE SALE
-// FALTAN CRUCES PARA CERRRA LOS ASIDE
 // ACCESIBILIDAD
 // TAGS EN HEAD
 // ICONOS CIRCULARES DE LOS COLOR PICKER 
