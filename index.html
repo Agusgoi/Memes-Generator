@@ -57,8 +57,8 @@
     <!-- Header -->
     <header>
         <div class="title-btn">
-            <div class="cont-btn-mode">
-                <button class="mode">
+            <div aria-hidden="true" class="cont-btn-mode">
+                <button tabindex="5" class="mode">
                     <i class="fa-regular fa-lightbulb">
                         <span class="span-mode">Modo Oscuro</span></i>
                 </button>
@@ -68,16 +68,14 @@
             </div>
         </div>
         <div class="buttons-editor">
-            <button class="btn-image">
+            <button tabindex="10" class="btn-image">
                 <i class="fa-regular fa-image">
                     <span>Editar Imagen</span></i>
             </button>
-
-            <button class="btn-text">
+            <button tabindex="15" class="btn-text">
                 <i class="fa-solid fa-pen-nib"></i>
                 <span>Editar Texto</span></i>
             </button>
-
         </div>
     </header>
     <!-- End Header -->
@@ -87,7 +85,7 @@
     <main>
 
         <!-- Section Meme Container -->
-        <section class="section-meme">
+        <section aria-hidden="true" class="section-meme">
             <div id="meme-container">
                 <p class="text-1">TEXTO SUPERIOR</p>
                 <div class="image-container"></div>
@@ -104,20 +102,20 @@
 
             <!-- Image Editor -->
             <section class="img-aside">
-                <button class="close-img">X</button>
+                <button tabindex="20" class="close-img">X</button>
                 <h2 class="h2-img">IMAGEN</h2>
                 <div class="input-url">
                     <h3 class="subt1">URL</h3>
-                    <input class="url" type="text" name="url" required placeholder="Copia aca el link">
+                    <input tabindex="25" class="url" type="text" name="url" required placeholder="Copia aca el link">
                 </div>
                 <div class="input-background">
                     <h3 class="subt2">FONDO</h3>
                     <div class="color">
                         <div class="cont-color1">
-                            <input type="color" value="#FFFFFF" class="input-img-color">
+                            <input tabindex="30" type="color" value="#FFFFFF" class="input-img-color">
                             <span class="name-color-image">#FFFFFF</span>
                         </div>
-                        <select name="color-effect" class="input-img-colortype">
+                        <select tabindex="35" name="color-effect" class="input-img-colortype">
                             <option value="normal">Ninguno</option>
                             <option value="lighten">Aclarar</option>
                             <option value="darken">Oscurecer</option>
@@ -130,69 +128,69 @@
                 <div class="panel-range">
                     <div class="panel-control-slider">
                         <label for="brightness">BRILLO</label>
-                        <input type="range" class="brightness" value="1" min="0" max="1" step="0.1">
+                        <input tabindex="40" type="range" class="brightness" value="1" min="0" max="1" step="0.1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="opacity">OPACIDAD</label>
-                        <input type="range" class="opacity" value="1" min="0" max="1" step="0.1">
+                        <input tabindex="45" type="range" class="opacity" value="1" min="0" max="1" step="0.1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="contrast">CONTRASTE</label>
-                        <input type="range" class="contrast" value="100" min="100" max="1000" step="1">
+                        <input tabindex="50" type="range" class="contrast" value="100" min="100" max="1000" step="1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="blur">DESENFOQUE</label>
-                        <input type="range" class="blur" value="0" min="0" max="10" step="0.1">
+                        <input tabindex="55" type="range" class="blur" value="0" min="0" max="10" step="0.1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="grayscale">ESCALA DE GRISES</label>
-                        <input type="range" class="grayscale" value="0" min="0" max="100" step="1">
+                        <input tabindex="60" type="range" class="grayscale" value="0" min="0" max="100" step="1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="sepia">SEPIA</label>
-                        <input type="range" class="sepia" value="0" min="0" max="100" step="1">
+                        <input tabindex="65" type="range" class="sepia" value="0" min="0" max="100" step="1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="hue">HUE</label>
-                        <input type="range" class="hue" value="0" min="0" max="359" step="1">
+                        <input tabindex="70" type="range" class="hue" value="0" min="0" max="359" step="1">
                     </div>
                     <div class="panel-control-slider">
                         <label for="saturation">SATURADO</label>
-                        <input type="range" class="saturation" value="100" min="100" max="1000" step="10">
+                        <input tabindex="75" type="range" class="saturation" value="100" min="100" max="1000" step="10">
                     </div>
                     <div class="panel-control-slider">
                         <label for="negative">NEGATIVO</label>
-                        <input type="range" class="negative" value="0" min="0" max="1" step="0.1">
+                        <input tabindex="80" type="range" class="negative" value="0" min="0" max="1" step="0.1">
                     </div>
                 </div>
-                <button class="reset">Reestablecer filtros</button>
+                <button tabindex="85" class="reset">Reestablecer filtros</button>
             </section>
             <!-- End Image Editor -->
 
 
             <!-- Text Editor  -->
             <section class="txt-aside">
-                <button class="close-txt">X</button>
+                <button tabindex="90" class="close-txt">X</button>
                 <h2 class="h2-txt">TEXTO</h2>
                 <div class="input-top-txt">
                     <h3 class="subt3">SUPERIOR</h3>
-                    <textarea name="top-txt" class="input-textarea1" placeholder="Texto Superior"></textarea>
+                    <textarea tabindex="95" name="top-txt" class="input-textarea1" placeholder="Texto Superior"></textarea>
                     <div class="checkbox">
-                        <input type="checkbox" id="checkbox-top">
+                        <input tabindex="100" type="checkbox" id="checkbox-top">
                         <label for="checkbox-top">Sin Texto Superior</label>
                     </div>
                 </div>
                 <div class="input-bottom-txt">
                     <h3 class="subt4">INFERIOR</h3>
-                    <textarea name="bottom-txt" class="input-textarea2" placeholder="Texto Inferior"></textarea>
+                    <textarea tabindex="105" name="bottom-txt" class="input-textarea2" placeholder="Texto Inferior"></textarea>
                     <div class="checkbox">
-                        <input type="checkbox" id="checkbox-bottom">
+                        <input tabindex="110" type="checkbox" id="checkbox-bottom">
                         <label for="checkbox-bottom">Sin Texto Inferior</label>
                     </div>
                 </div>
                 <div class="font">
                     <h3 class="subt5">FUENTE</h3>
-                    <select class="input-font" name="font-type">
+                    <select tabindex="115" class="input-font" name="font-type">
                         <option value="arial">Arial</option>
                         <option value="courier">Courier New</option>
                         <option value="lucida">Lucida Sans</option>
@@ -202,11 +200,11 @@
                         <option value="source sans pro">Source Sans Pro</option>
                     </select>
                     <div class="font-selector">
-                        <input class="font-size" type="number" value="40" min="20" max="60">
+                        <input tabindex="120" class="font-size" type="number" value="40" min="20" max="60">
                         <div class="text-align">
-                            <button class="btn-align1"><i class="fa-solid fa-align-left"></i></button>
-                            <button class="btn-align2"><i class="fa-solid fa-align-center"></i></button>
-                            <button class="btn-align3"><i class="fa-solid fa-align-right"></i></button>
+                            <button tabindex="125" class="btn-align1"><i class="fa-solid fa-align-left"></i></button>
+                            <button tabindex="130" class="btn-align2"><i class="fa-solid fa-align-center"></i></button>
+                            <button tabindex="135" class="btn-align3"><i class="fa-solid fa-align-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -215,38 +213,38 @@
                         <div class="color-font">
                             <h3 class="subt6">COLOR</h3>
                             <div class="cont-color2">
-                                <input type="color" value="#000000" class="input-color-font">
+                                <input tabindex="140" type="color" value="#000000" class="input-color-font">
                                 <span class="name-color">#000000</span>
                             </div>
                         </div>
                         <div class="color-back">
                             <h3 class="subt7">FONDO</h3>
                             <div class="cont-color3">
-                                <input type="color" value="#FFFFFF" class="input-color-back">
+                                <input tabindex="145" type="color" value="#FFFFFF" class="input-color-back">
                                 <span class="name-color-back">#FFFFFF</span>
                             </div>
                         </div>
                     </div>
                     <div class="checkbox">
-                        <input type="checkbox" id="checkbox-back">
+                        <input tabindex="150" type="checkbox" id="checkbox-back">
                         <label for="checkbox">Fondo transparente</label>
                     </div>
                 </div>
                 <div class="font-outline">
                     <h3 class="subt8">CONTORNO</h3>
                     <div class="outline-type">
-                        <button class="btn-outline1">Ninguno</button>
-                        <button class="btn-outline2">Blanco</button>
-                        <button class="btn-outline3">Negro</button>
+                        <button tabindex="155" class="btn-outline1">Ninguno</button>
+                        <button tabindex="160" class="btn-outline2">Blanco</button>
+                        <button tabindex="165" class="btn-outline3">Negro</button>
                     </div>
                 </div>
                 <div class="space">
                     <h3 class="subt9">ESPACIADO</h3>
-                    <input type="number" class="input-space" value="5" min="5" max="70" step="5">
+                    <input tabindex="170" type="number" class="input-space" value="5" min="5" max="70" step="5">
                 </div>
                 <div class="input-line-spacing">
                     <h3 class="subt10">INTERLINEADO</h3>
-                    <select id="line-spacing" name="line-spacing" class="select-line-spacing">
+                    <select tabindex="175" id="line-spacing" name="line-spacing" class="select-line-spacing">
                         <option value="35">0.8</option>
                         <option value="40">1</option>
                         <option value="45">1.2</option>
