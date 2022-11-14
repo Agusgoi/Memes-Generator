@@ -13,10 +13,6 @@ let contImage = $ ("#meme-container");
 let imageContainer = $ ('.image-container');
 let sectionwidht = section.clientWidth
 
-
-
-
-
 //textos
 let titleTxt = $ ('.h2-txt');
 let titleImg = $ ('.h2-img');
@@ -81,8 +77,6 @@ let saturationInput = $ ('.saturation');
 let negativeInput = $ ('.negative');
 
 
- 
-
 
 // CAMBIO DE MODE ==============================================================
 
@@ -141,30 +135,26 @@ btnMode.addEventListener ("click", (event)=> {
     inputUrl.classList.toggle ("darkmode-header");
     btnBlend.classList.toggle ("darkmode-header");
     btnReset.classList.toggle ("darkmode-header");
-    brightnessInput.classList.toggle ("darkmode-header"); //no funciona ni agrupand0 lo inputs de filtros ni asi, individualmente    
+    brightnessInput.classList.toggle ("darkmode-header"); //no funciona ni agrupand0 lo inputs de filtros, ni asi, individualmente    
 })
 
 
 btnText.addEventListener ("click", (event)=>{
    asideText.classList.remove ("display-none");
    asideImage.classList.add ("display-none");
-    
 })
 
 btnImage.addEventListener ("click", (event)=>{
     asideText.classList.add ("display-none");
     asideImage.classList.remove ("display-none");
-     
 })
 
 btnCloseImg.addEventListener ("click", (event)=>{
     asideImage.classList.add  ("display-none");
-     
 })
 
 btnCloseTxt.addEventListener ("click", (event)=>{
     asideText.classList.add ("display-none");
-     
 })
 
 
@@ -183,7 +173,6 @@ checkboxBack.addEventListener ("change", (event)=>{
        textInf.style.backgroundColor = fontColorBack.value;
        textSup.style.backgroundColor = fontColorBack.value;
     }
-   
    })
    
 
@@ -192,14 +181,11 @@ checkboxBack.addEventListener ("change", (event)=>{
 
 bottomTextImput.addEventListener ("input", (event)=>{
     textInf.innerText = event.target.value;
-
 })
 
 topTextImput.addEventListener ("input", (event)=>{
-    textSup.innerText = event.target.value;
-   
+    textSup.innerText = event.target.value; 
 })
-
 
 checkboxTop.addEventListener ("click", (event)=>{
  textSup.classList.toggle ("display-none");
@@ -213,7 +199,6 @@ fontSize.addEventListener ("input", (event)=>{
     textSup.style.fontSize = `${event.target.value}px`;
     textInf.style.fontSize = `${event.target.value}px`;
 })
-
 
 fontSelect.addEventListener ("click", (event)=>{
     textSup.style.fontFamily = `${event.target.value}`;
@@ -288,14 +273,11 @@ lineSpacing.addEventListener ("click", (event)=>{
 // IMAGE EDITOR ASIDE ========================================================
 
 
-
-
 // --------------- Funciones ---------------
 
 
 const updateAllFilters = () => {
 imageContainer.style.filter = `brightness(${brightnessInput.value}) opacity(${opacityInput.value}) contrast(${contrastInput.value}%) blur(${blurInput.value}px) grayscale(${grayscaleInput.value}%) sepia(${sepiaInput.value}%) hue-rotate(${hueInput.value}deg) saturate(${saturationInput.value}%) invert(${negativeInput.value}) `
-
 };
 
 
@@ -313,7 +295,6 @@ const reseatAllFilters = () => {
     updateAllFilters (); // para que el reset de los filtros se aplique en la imagen.
 }
  
-
 
 // --------------- Eventos ---------------
 
@@ -360,7 +341,6 @@ const descargarMeme = () => {
 };
 
 
-
 if (sectionwidht <= '768')  {
     spanMode.classList.add ("display-none");
  }
@@ -368,7 +348,6 @@ if (sectionwidht <= '768')  {
 
 
 // --------------- Evento ---------------
-
 
 btnDownload.addEventListener("click", descargarMeme);
 
