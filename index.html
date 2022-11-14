@@ -1,32 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
         integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
         integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      ></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js"
         integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      ></script>
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-      <link rel="canonical" href="XXXXXXXXXX" />  <!-- FALTAAAAAA vercel http -->
-
-    <link rel="icon" href="/imagenes/logo.png" />  <!-- FALTAAAAAA -->
+    <link rel="canonical" href="https://memes-generator-agusgoi.vercel.app/" />
+    <link rel="icon" href="/imagenes/logo-memes.png" /> 
     <meta name="googlebot" content="index,follow" />
     <meta name="robots" content="index,follow" />
-    <meta name="google-site-verification" content=" "/>
+    <meta name="google-site-verification" content=" " />
     <meta name="subject" content="Generador de Memes" />
     <meta name="referrer" content="no-referrer" />
 
@@ -40,48 +34,48 @@
     <link rel="archives" href="https://www.linkedin.com/in/agustina-goitea/" />
 
     <!-- Social Tags -->
-    <meta property="og:url" content="https://portfolio-agusgoi.vercel.app/">  <!-- FALTAAAAAA -->
+    <meta property="og:url" content="https://memes-generator-agusgoi.vercel.app/">
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Generador de Memes" />
-    <meta property="og:image" content="/imagenes/logo.png" />  <!-- FALTAAAAAA -->
-    <meta property="og:image" name="twitter:image" content="/imagenes/logo.png" />  <!-- FALTAAAAAA -->
-    <link rel="apple-touch-icon" href="/imagenes/logo.png" />  <!-- FALTAAAAAA -->
-    <meta property="og:description" name="twitter:description"
-    content="Generador de Memes" />
-    <meta name="theme-color" content="rgb(167, 162, 162)" />  <!-- FALTAAAAAA -->
+    <meta property="og:image" content="/imagenes/logo-memes.png" /> 
+    <meta property="og:image" name="twitter:image" content="/imagenes/logo-memes.png" /> 
+    <link rel="apple-touch-icon" href="/imagenes/logo-memes.png" /> 
+    <meta property="og:description" name="twitter:description" content="Generador de Memes" />
+    <meta name="theme-color" content="#388163" />
     <meta name="twitter:card" content="summary" />
     <meta property="og:image:alt" content="Logo de Generador de Memes" />
     <meta property="og:description" content="Generador de Memes" />
     <meta property="og:site_name" content="Generador de Memes" />
     <meta property="og:locale" content="AR" />
     <meta property="article:author" content="https://www.linkedin.com/in/agustina-goitea/" />
-   
+
     <title>Generador de Memes</title>
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
         <div class="title-btn">
             <div class="cont-btn-mode">
-                <button class="mode" >
-                <i class="fa-regular fa-lightbulb">
-                <span class="span-mode">Modo Oscuro</span></i>
+                <button class="mode">
+                    <i class="fa-regular fa-lightbulb">
+                        <span class="span-mode">Modo Oscuro</span></i>
                 </button>
             </div>
-                  <div class="title">
+            <div class="title">
                 <h1>Generador de Memes</h1>
             </div>
         </div>
         <div class="buttons-editor">
             <button class="btn-image">
                 <i class="fa-regular fa-image">
-                <span>Editar Imagen</span></i>
-                </button>
+                    <span>Editar Imagen</span></i>
+            </button>
 
             <button class="btn-text">
                 <i class="fa-solid fa-pen-nib"></i>
-                    <span>Editar Texto</span></i>
+                <span>Editar Texto</span></i>
             </button>
 
         </div>
@@ -89,196 +83,186 @@
     <!-- End Header -->
 
     <!-- Main -->
+
     <main>
 
         <!-- Section Meme Container -->
         <section class="section-meme">
             <div id="meme-container">
-                <p  class="text-1">TEXTO SUPERIOR</p>
+                <p class="text-1">TEXTO SUPERIOR</p>
                 <div class="image-container"></div>
-                <p  class="text-2">TEXTO INFERIOR</p>
+                <p class="text-2">TEXTO INFERIOR</p>
             </div>
-           <button class="download">Descargar Meme</button>       
+            <button class="download">Descargar Meme</button>
         </section>
-
         <!-- End Section Meme Container -->
+
 
         <!-- Aside -->
 
         <aside id="editor">
 
             <!-- Image Editor -->
-        <section class="img-aside">
-            <button class="close-img">X</button>
-        <h2 class="h2-img">IMAGEN</h2>
-        <div class="input-url">
-            <h3 class="subt1">URL</h3>
-            <input class="url" type="text" name="url" required placeholder="Copia aca el link">
-        </div>
-       
-        <div class="input-background">
-            <h3 class="subt2">FONDO</h3>
-            <div class="color">
-                
-
-                <div class="cont-color1">
-                    <input type="color" value="#FFFFFF" class="input-img-color">
-                    <span class="name-color-image">#FFFFFF</span>
+            <section class="img-aside">
+                <button class="close-img">X</button>
+                <h2 class="h2-img">IMAGEN</h2>
+                <div class="input-url">
+                    <h3 class="subt1">URL</h3>
+                    <input class="url" type="text" name="url" required placeholder="Copia aca el link">
                 </div>
-
-
-                <select name="color-effect" class="input-img-colortype">
-                        <option value="normal">Ninguno</option>
-                        <option value="lighten">Aclarar</option>
-                        <option value="darken">Oscurecer</option>
-                        <option value="difference">Diferencia</option>
-                        <option value="luminosity">Luminosidad</option>
-                        <option value="multiply">Multiplicar</option>
-                </select>
-            </div>
-        </div>
-
-        <div class="panel-range">
-            <div class="panel-control-slider">
-                <label for="brightness">BRILLO</label>
-                <input type="range" class="brightness" value="1" min="0" max="1" step="0.1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="opacity">OPACIDAD</label>
-                <input type="range" class="opacity" value="1" min="0" max="1" step="0.1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="contrast">CONTRASTE</label>
-                <input type="range" class="contrast" value="100" min="100" max="1000" step="1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="blur">DESENFOQUE</label>
-                <input type="range" class="blur" value="0" min="0" max="10" step="0.1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="grayscale">ESCALA DE GRISES</label>
-                <input type="range" class="grayscale" value="0" min="0" max="100" step="1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="sepia">SEPIA</label>
-                <input type="range" class="sepia" value="0" min="0" max="100" step="1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="hue">HUE</label>
-                <input type="range" class="hue" value="0" min="0" max="359" step="1">
-            </div>
-            <div class="panel-control-slider">
-                <label for="saturation">SATURADO</label>
-                <input type="range" class="saturation" value="100" min="100" max="1000" step="10">
-            </div>
-            <div class="panel-control-slider">
-                <label for="negative">NEGATIVO</label>
-                <input type="range" class="negative" value="0" min="0" max="1" step="0.1">
-            </div>
-
-        </div>
-        <button class="reset">Reestablecer filtros</button>
-    </section>
- <!-- End Image Editor -->
-
- <!-- Text Editor  -->
- <section class="txt-aside">
-    <button class="close-txt">X</button>
-    <h2 class="h2-txt">TEXTO</h2>
-    <div class="input-top-txt">
-        <h3 class="subt3">SUPERIOR</h3>
-        <textarea name="top-txt" class="input-textarea1" placeholder="Texto Superior"></textarea>
-        <div class="checkbox">
-            <input type="checkbox" id="checkbox-top">
-            <label for="checkbox-top" >Sin Texto Superior</label>
-        </div>
-    </div>
-    <div class="input-bottom-txt">
-            <h3 class="subt4">INFERIOR</h3>
-            <textarea name="bottom-txt" class="input-textarea2" placeholder="Texto Inferior"></textarea>
-            <div class="checkbox">
-                <input type="checkbox" id="checkbox-bottom">
-                <label for="checkbox-bottom" >Sin Texto Inferior</label>
-            </div>
-    </div>
-
-    <div class="font">
-        <h3 class="subt5">FUENTE</h3>
-        <select  class="input-font" name="font-type">
-            <option value="arial">Arial</option>
-            <option value="courier">Courier New</option>
-            <option value="lucida">Lucida Sans</option>
-            <option value="cambria">Cambria</option>
-            <option value="verdana">Verdana</option>
-            <option value="monospace">Monospace</option>
-            <option value="source sans pro">Source Sans Pro</option>
-        </select>
-        <div class="font-selector">
-            <input class="font-size" type="number" value="40" min="20" max="60">
-            <div class="text-align">
-                <button  class="btn-align1"><i class="fa-solid fa-align-left"></i></button>
-                <button  class="btn-align2"><i class="fa-solid fa-align-center"></i></button>
-                <button  class="btn-align3"><i class="fa-solid fa-align-right"></i></button>
-            </div>
-        </div>
-    </div>
-
-    <div class="panel-color-back">
-        <div class="color-font-back">
-            <div class="color-font">
-                <h3 class="subt6">COLOR</h3>
-                <div class="cont-color2">
-                    <input type="color" value="#000000" class="input-color-font">
-                    <span class="name-color">#000000</span>
+                <div class="input-background">
+                    <h3 class="subt2">FONDO</h3>
+                    <div class="color">
+                        <div class="cont-color1">
+                            <input type="color" value="#FFFFFF" class="input-img-color">
+                            <span class="name-color-image">#FFFFFF</span>
+                        </div>
+                        <select name="color-effect" class="input-img-colortype">
+                            <option value="normal">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="color-back">
-                <h3 class="subt7">FONDO</h3>
-                <div class="cont-color3">
-                    <input type="color" value="#FFFFFF" class="input-color-back">
-                    <span class="name-color-back">#FFFFFF</span>
+                <div class="panel-range">
+                    <div class="panel-control-slider">
+                        <label for="brightness">BRILLO</label>
+                        <input type="range" class="brightness" value="1" min="0" max="1" step="0.1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="opacity">OPACIDAD</label>
+                        <input type="range" class="opacity" value="1" min="0" max="1" step="0.1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="contrast">CONTRASTE</label>
+                        <input type="range" class="contrast" value="100" min="100" max="1000" step="1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="blur">DESENFOQUE</label>
+                        <input type="range" class="blur" value="0" min="0" max="10" step="0.1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="grayscale">ESCALA DE GRISES</label>
+                        <input type="range" class="grayscale" value="0" min="0" max="100" step="1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="sepia">SEPIA</label>
+                        <input type="range" class="sepia" value="0" min="0" max="100" step="1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="hue">HUE</label>
+                        <input type="range" class="hue" value="0" min="0" max="359" step="1">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="saturation">SATURADO</label>
+                        <input type="range" class="saturation" value="100" min="100" max="1000" step="10">
+                    </div>
+                    <div class="panel-control-slider">
+                        <label for="negative">NEGATIVO</label>
+                        <input type="range" class="negative" value="0" min="0" max="1" step="0.1">
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="checkbox">
-            <input type="checkbox" id="checkbox-back">
-            <label for="checkbox" >Fondo transparente</label>
-        </div>
-    </div>
-    <div class="font-outline">
-        <h3 class="subt8">CONTORNO</h3>
-        <div class="outline-type">
-            <button class="btn-outline1">Ninguno</button>
-            <button class="btn-outline2">Blanco</button>
-            <button class="btn-outline3">Negro</button>
-        </div>
-    </div>
-    <div class="space">
-        <h3 class="subt9">ESPACIADO</h3>
-        <input type="number" class="input-space" value="5" min="5" max="70" step="5">
-    </div>
-
-    <div class="input-line-spacing">
-        <h3 class="subt10">INTERLINEADO</h3>
-        <select id="line-spacing" name="line-spacing" class="select-line-spacing">
-            <option value="35">0.8</option>
-            <option value="40">1</option>
-            <option value="45">1.2</option>
-            <option value="50">1.5</option>
-            <option value="60">2</option>
-            <option value="70">2.5</option>
-    </div>
-
- <!-- End Text Editor-->
+                <button class="reset">Reestablecer filtros</button>
+            </section>
+            <!-- End Image Editor -->
 
 
+            <!-- Text Editor  -->
+            <section class="txt-aside">
+                <button class="close-txt">X</button>
+                <h2 class="h2-txt">TEXTO</h2>
+                <div class="input-top-txt">
+                    <h3 class="subt3">SUPERIOR</h3>
+                    <textarea name="top-txt" class="input-textarea1" placeholder="Texto Superior"></textarea>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox-top">
+                        <label for="checkbox-top">Sin Texto Superior</label>
+                    </div>
+                </div>
+                <div class="input-bottom-txt">
+                    <h3 class="subt4">INFERIOR</h3>
+                    <textarea name="bottom-txt" class="input-textarea2" placeholder="Texto Inferior"></textarea>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox-bottom">
+                        <label for="checkbox-bottom">Sin Texto Inferior</label>
+                    </div>
+                </div>
+                <div class="font">
+                    <h3 class="subt5">FUENTE</h3>
+                    <select class="input-font" name="font-type">
+                        <option value="arial">Arial</option>
+                        <option value="courier">Courier New</option>
+                        <option value="lucida">Lucida Sans</option>
+                        <option value="cambria">Cambria</option>
+                        <option value="verdana">Verdana</option>
+                        <option value="monospace">Monospace</option>
+                        <option value="source sans pro">Source Sans Pro</option>
+                    </select>
+                    <div class="font-selector">
+                        <input class="font-size" type="number" value="40" min="20" max="60">
+                        <div class="text-align">
+                            <button class="btn-align1"><i class="fa-solid fa-align-left"></i></button>
+                            <button class="btn-align2"><i class="fa-solid fa-align-center"></i></button>
+                            <button class="btn-align3"><i class="fa-solid fa-align-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-color-back">
+                    <div class="color-font-back">
+                        <div class="color-font">
+                            <h3 class="subt6">COLOR</h3>
+                            <div class="cont-color2">
+                                <input type="color" value="#000000" class="input-color-font">
+                                <span class="name-color">#000000</span>
+                            </div>
+                        </div>
+                        <div class="color-back">
+                            <h3 class="subt7">FONDO</h3>
+                            <div class="cont-color3">
+                                <input type="color" value="#FFFFFF" class="input-color-back">
+                                <span class="name-color-back">#FFFFFF</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkbox-back">
+                        <label for="checkbox">Fondo transparente</label>
+                    </div>
+                </div>
+                <div class="font-outline">
+                    <h3 class="subt8">CONTORNO</h3>
+                    <div class="outline-type">
+                        <button class="btn-outline1">Ninguno</button>
+                        <button class="btn-outline2">Blanco</button>
+                        <button class="btn-outline3">Negro</button>
+                    </div>
+                </div>
+                <div class="space">
+                    <h3 class="subt9">ESPACIADO</h3>
+                    <input type="number" class="input-space" value="5" min="5" max="70" step="5">
+                </div>
+                <div class="input-line-spacing">
+                    <h3 class="subt10">INTERLINEADO</h3>
+                    <select id="line-spacing" name="line-spacing" class="select-line-spacing">
+                        <option value="35">0.8</option>
+                        <option value="40">1</option>
+                        <option value="45">1.2</option>
+                        <option value="50">1.5</option>
+                        <option value="60">2</option>
+                        <option value="70">2.5</option>
+                </div>
+                <!-- End Text Editor-->
 
         </aside>
-
         <!-- End Aside -->
+
     </main>
-    
     <!-- End Main -->
+
     <script src="main.js"></script>
 </body>
+
 </html>
