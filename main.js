@@ -1,10 +1,9 @@
-
+const $ = (selector) => document.querySelector (selector);
 
 // --------------- VARIABLES ---------------
 
 
 //general
-const $ = (selector) => document.querySelector (selector);
 let header = $ ('header');
 let section = $ ('.section-meme');
 let asideText = $ ('.txt-aside');

@@ -143,6 +143,7 @@ main {
     font-size: 20px;
     background-color: var(--lightmode-green);
     color: #ffffff;
+    cursor: pointer;
 }
 
 
@@ -433,6 +434,7 @@ textarea,
     background-color: var(--lightmode-darkblue);
     color: #ffffff;
     border: none;
+    cursor: pointer;
 }
 
 
