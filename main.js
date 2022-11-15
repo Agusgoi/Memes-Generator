@@ -4,6 +4,7 @@ const $ = (selector) => document.querySelector (selector);
 
 
 //general
+let body = $ ('body');
 let header = $ ('header');
 let section = $ ('.section-meme');
 let asideText = $ ('.txt-aside');
@@ -13,18 +14,7 @@ let imageContainer = $ ('.image-container');
 let sectionwidht = section.clientWidth
 
 //textos
-let titleTxt = $ ('.h2-txt');
-let titleImg = $ ('.h2-img');
-let subtUno = $ ('.subt1');
-let subtDos = $ ('.subt2');
-let subtTres = $ ('.subt3');
-let subtCuatro = $ ('.subt4');
-let subtCinco = $ ('.subt5');
-let subtSeis = $ ('.subt6');
-let subtSiete = $ ('.subt7');
-let subtOcho = $ ('.subt8');
-let subtNueve = $ ('.subt9');
-let subtDiez = $ ('.subt10');
+
 let spanMode = $ ('.span-mode');
 let nameColor = $ ('.name-color');
 let nameColorBack = $ ('.name-color-back');
@@ -38,7 +28,6 @@ let topTextImput = $ ('.input-textarea1');
 let bottomTextImput = $ ('.input-textarea2');
 let fontSize = $ ('.font-size');
 let fontSelect = $ ('.input-font');
-let colorImgInput = $ ('.cont-color1');
 let colorFontInput = $ ('.cont-color2');
 let colorTxtBackInput = $ ('.cont-color3');
 let spacing = $ ('.input-space');
@@ -77,7 +66,7 @@ let negativeInput = $ ('.negative');
 
 
 
-// CAMBIO DE MODE ==============================================================
+// BOTONES ==============================================================
 
 
 // --------------- Funciones ---------------
@@ -94,47 +83,8 @@ btnMode.addEventListener ("click", (event)=> {
 })
 
 
-// --------------- Eventos ---------------
-
 btnMode.addEventListener ("click", (event)=> {
-    btnMode.classList.toggle ("darkmode-header");
-    btnText.classList.toggle ("darkmode-header");
-    btnImage.classList.toggle ("darkmode-header");
-    section.classList.toggle ("darkmode-back");
-    asideText.classList.toggle ("darkmode-aside");
-    asideImage.classList.toggle ("darkmode-aside");
-    topTextImput.classList.toggle ("darkmode-header");
-    bottomTextImput.classList.toggle ("darkmode-header");
-    fontSelect.classList.toggle ("darkmode-header");
-    leftAlign.classList.toggle ("darkmode-header");
-    centerAlign.classList.toggle ("darkmode-header");
-    rightAlign.classList.toggle ("darkmode-header");
-    fontSize.classList.toggle ("darkmode-header");
-    noneOut.classList.toggle ("darkmode-header");
-    blackOut.classList.toggle ("darkmode-header");
-    whiteOut.classList.toggle ("darkmode-header");
-    lineSpacing.classList.toggle ("darkmode-header");
-    spacing.classList.toggle ("darkmode-header");
-    titleImg.classList.toggle ("darkmode-txt");
-    titleTxt.classList.toggle ("darkmode-txt");
-    subtUno.classList.toggle ("darkmode-txt");
-    subtDos.classList.toggle ("darkmode-txt");
-    subtTres.classList.toggle ("darkmode-txt");
-    subtCuatro.classList.toggle ("darkmode-txt");
-    subtCinco.classList.toggle ("darkmode-txt");
-    subtSeis.classList.toggle ("darkmode-txt");
-    subtSiete.classList.toggle ("darkmode-txt"); 
-    subtOcho.classList.toggle ("darkmode-txt"); 
-    subtNueve.classList.toggle ("darkmode-txt"); 
-    subtDiez.classList.toggle ("darkmode-txt"); 
-    colorFontInput.classList.toggle ("darkmode-header");
-    colorImgInput.classList.toggle ("darkmode-header");
-    colorTxtBackInput.classList.toggle ("darkmode-header"); 
-    btnDownload.classList.toggle ("darkmode-header"); 
-    inputUrl.classList.toggle ("darkmode-header");
-    btnBlend.classList.toggle ("darkmode-header");
-    btnReset.classList.toggle ("darkmode-header");
-    brightnessInput.classList.toggle ("darkmode-header"); //no funciona ni agrupand0 lo inputs de filtros, ni asi, individualmente    
+    body.classList.toggle ("darkmode");
 })
 
 
@@ -341,7 +291,9 @@ const descargarMeme = () => {
 
 
 if (sectionwidht <= '768')  {
-    spanMode.classList.add ("display-none");
+    console.log ('hola')
+    spanMode.style.display = 'none';
+
  }
 
 

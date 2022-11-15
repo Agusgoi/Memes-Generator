@@ -174,16 +174,7 @@ main {
     align-self: center;
 }
 
-.subt1,
-.subt2,
-.subt3,
-.subt4,
-.subt5,
-.subt6,
-.subt7,
-.subt8,
-.subt9,
-.subt10 {
+.subt {
     color: #000000;
     font-size: 15px;
     font-weight: 600;
@@ -404,7 +395,6 @@ textarea,
     opacity: 0.7;
     transition: opacity .2s;
     margin-bottom: 6px;
-    background: yellow;
 }
 
 .panel-control-slider label {
@@ -440,29 +430,31 @@ textarea,
 
 /* =============== CLASES PARA DARKMODE =============== */
 
-.darkmode-header {
+.darkmode header, .darkmode button, .darkmode input, .darkmode select, .darkmode textarea, .darkmode .cont-color1, .darkmode .cont-color2, .darkmode .cont-color3{
     color: #ffffff;
     background-color: var(--darkmode-black);
 }
 
-
-.darkmode-back {
+.darkmode .section-meme{
     background-color: var(--darkmode-lightgrey);
+    color: #ffffff;
 
 }
 
-.darkmode-aside {
+.darkmode .img-aside,.darkmode .txt-aside, .darkmode .subt, .darkmode h2 {
     background-color: var(--darkmode-grey);
     color: #ffffff;
 }
 
-.darkmode-txt {
-    color: #ffffff;
-}
 
 .display-none {
     display: none;
-}
+} 
+
+
+
+
+
 
 
 /* =============== RESPONSIVE DESIGN =============== */
@@ -522,16 +514,7 @@ textarea,
         margin: 20px 0px;
     }
 
-    .subt1,
-    .subt2,
-    .subt3,
-    .subt4,
-    .subt5,
-    .subt6,
-    .subt7,
-    .subt8,
-    .subt9,
-    .subt10 {
+    .subt {
         font-size: 12px;
     }
 
